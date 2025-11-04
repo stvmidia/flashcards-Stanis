@@ -1,0 +1,5 @@
+{
+  "name": "Flash Cards Stanismar",
+  "description": "A modern flashcard application to study for FGV exams. Users can select categories and review questions and answers with a clean, mobile-friendly interface.",
+  "requestFramePermissions": []
+}
