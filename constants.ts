@@ -383,7 +383,7 @@ export const CATEGORIES: Category[] = [
           },
           {
             question: 'Na primeira página de uma publicação institucional, qual recurso é usado para coordenar e destacar várias matérias sobre um mesmo tema, geralmente com 10 a 15 linhas?',
-            answer: 'Chamada.'
+            answer: 'lidao'
           },
           {
             question: 'Para organizar dados para um espelho de programação, qual a ordem crescente de detalhamento entre os indexadores: editoria, lead flash, retranca e tags?',
