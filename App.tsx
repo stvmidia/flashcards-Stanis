@@ -184,6 +184,8 @@ export const App = () => {
                   <ExamQuestion
                     question={activeCards[currentCardIndex].question}
                     answer={activeCards[currentCardIndex].answer}
+                    alternatives={activeCards[currentCardIndex].alternatives}
+                    correctAlternativeIndex={activeCards[currentCardIndex].correctAlternativeIndex}
                     isAnswerVisible={isAnswerVisible}
                     onToggleAnswer={() => setIsAnswerVisible(!isAnswerVisible)}
                     cardNumber={currentCardIndex + 1}
@@ -226,7 +228,7 @@ export const App = () => {
         
         <footer className="text-center text-gray-500 mt-8 text-base">
           {studyMode === 'flashcard' && <p>Clique no card para virar e ver a resposta.</p>}
-          {studyMode === 'exam' && <p>Use os botões para navegar entre as questões.</p>}
+          {studyMode === 'exam' && <p>Selecione uma alternativa e clique em "Revelar Resposta".</p>}
         </footer>
       </main>
     </>

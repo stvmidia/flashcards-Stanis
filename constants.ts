@@ -67,7 +67,14 @@ export const CATEGORIES: Category[] = [
           },
           {
             question: 'Qual a principal lição do "Caso Escola Base" para a mídia?',
-            answer: 'A mídia deve assumir a responsabilidade de relatar apenas fatos verificados, evitando a disseminação de informações não confirmadas para não causar danos aos envolvidos.'
+            answer: 'A principal lição é a necessidade de responsabilidade e verificação rigorosa dos fatos antes da publicação. O caso demonstrou os danos devastadores que a mídia pode causar ao divulgar acusações sem provas, baseadas em boatos. A ética jornalística exige que o direito à informação seja equilibrado com o respeito à dignidade e à presunção de inocência.',
+            alternatives: [
+              'A velocidade da reportagem é mais importante que a precisão dos fatos.',
+              'A mídia deve assumir a responsabilidade de relatar apenas fatos verificados, evitando a disseminação de informações não confirmadas.',
+              'O direito à liberdade de imprensa se sobrepõe ao direito de privacidade dos cidadãos.',
+              'A opinião pública deve guiar a cobertura jornalística, mesmo sem provas concretas.'
+            ],
+            correctAlternativeIndex: 1
           },
           {
             question: 'Segundo Adorno e Horkheimer, qual o principal efeito dos produtos da "Indústria Cultural"?',
@@ -107,7 +114,14 @@ export const CATEGORIES: Category[] = [
           },
           {
             question: 'Qual NÃO é uma característica de uma boa pauta jornalística?',
-            answer: 'Uma pauta não deve limitar ou engessar a apuração do repórter, ditando conclusões ou o limitando aos interesses de anunciantes.'
+            answer: 'Uma boa pauta serve como um guia inicial, mas deve oferecer flexibilidade para que o repórter explore novos ângulos durante a apuração. Limitar ou engessar o trabalho, ditando conclusões, vai contra o princípio da investigação jornalística e pode comprometer a imparcialidade da matéria.',
+            alternatives: [
+                'Ser clara e objetiva, fornecendo informações essenciais para o repórter.',
+                'Sugerir fontes e entrevistados relevantes para a apuração da matéria.',
+                'Ter flexibilidade para ser adaptada conforme novas informações surgem.',
+                'Limitar ou engessar a apuração do repórter, ditando conclusões.'
+            ],
+            correctAlternativeIndex: 3
           },
           {
             question: 'Qual locutor esportivo brasileiro ficou conhecido como "speaker metralhadora" por sua narração rápida e pioneira no rádio?',

@@ -1,6 +1,8 @@
 export interface Card {
   question: string;
   answer: string;
+  alternatives?: string[];
+  correctAlternativeIndex?: number;
 }
 
 export interface Deck {
