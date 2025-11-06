@@ -3,10 +3,11 @@ import { useState, useMemo } from 'react';
 import { CATEGORIES } from './constants';
 import { Flashcard } from './components/Flashcard';
 import { SettingsModal } from './components/SettingsModal';
+import { ExamQuestion } from './components/ExamQuestion';
 
 const GearIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.438.995s.145.755.438.995l1.003.827c.48.398.668 1.03.26 1.431l-1.296 2.247a1.125 1.125 0 01-1.37.49l-1.217-.456c-.355-.133-.75-.072-1.075.124a6.57 6.57 0 01-.22.127c-.332.183-.582.495-.645.87l-.213 1.281c-.09.543-.56.94-1.11.94h-2.593c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.063-.374-.313-.686-.645-.87a6.52 6.52 0 01-.22-.127c-.324-.196-.72-.257-1.075-.124l-1.217.456a1.125 1.125 0 01-1.37-.49l-1.296-2.247a1.125 1.125 0 01.26-1.431l1.003-.827c.293-.24.438-.613-.438.995s-.145-.755-.438-.995l-1.003-.827a1.125 1.125 0 01-.26-1.431l1.296-2.247a1.125 1.125 0 011.37-.49l1.217.456c.355.133.75.072 1.075-.124.073-.044.146-.087.22-.127.332-.183.582.495-.645-.87l.213-1.281z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.438.995s.145.755.438.995l1.003.827c.48.398.668 1.03.26 1.431l-1.296 2.247a1.125 1.125 0 01-1.37.49l-1.217-.456c-.355-.133-.75-.072-1.075.124a6.57 6.57 0 01-.22.127c-.332.183-.582.495-.645.87l-.213 1.281c-.09.543-.56.94-1.11.94h-2.593c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.063-.374-.313-.686-.645-.87a6.52 6.52 0 01-.22-.127c-.324-.196-.72-.257-1.075-.124l-1.217.456a1.125 1.125 0 01-1.37-.49l-1.296-2.247a1.125 1.125 0 01.26-1.431l1.003-.827c.293-.24.438-.613-.438.995s-.145-.755-.438-.995l-1.003-.827a1.125 1.125 0 01-.26-1.431l1.296-2.247a1.125 1.125 0 011.37.49l1.217.456c.355.133.75.072 1.075-.124.073-.044.146-.087.22-.127.332-.183.582.495-.645-.87l.213-1.281z" />
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
   </svg>
 );
@@ -36,6 +37,8 @@ export const App = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [studyMode, setStudyMode] = useState<'flashcard' | 'exam'>('flashcard');
+  const [isAnswerVisible, setIsAnswerVisible] = useState(false);
 
   const activeCategory = useMemo(() => 
     CATEGORIES.find(cat => cat.id === selectedCategoryId) || CATEGORIES[0], 
@@ -58,14 +61,20 @@ export const App = () => {
     return activeCategory.decks.find(deck => deck.id === selectedDeckId)?.cards || [];
   }, [activeCategory, selectedDeckId]);
 
-  const handleSettingsSave = (newCategoryId: string, newDeckId: string) => {
+  const handleSettingsSave = (newCategoryId: string, newDeckId: string, newStudyMode: 'flashcard' | 'exam') => {
     if (selectedCategoryId !== newCategoryId || selectedDeckId !== newDeckId) {
       setSelectedCategoryId(newCategoryId);
       setSelectedDeckId(newDeckId);
       setCurrentCardIndex(0);
-      setIsFlipped(false);
       setIsCompleted(false);
+    } else if (studyMode !== newStudyMode) {
+       setIsFlipped(false);
+       setIsAnswerVisible(false);
     }
+    
+    setStudyMode(newStudyMode);
+    setIsFlipped(false);
+    setIsAnswerVisible(false);
     setIsSettingsOpen(false);
   };
 
@@ -75,6 +84,7 @@ export const App = () => {
     if (currentCardIndex < activeCards.length - 1) {
       setCurrentCardIndex(currentCardIndex + 1);
       setIsFlipped(false);
+      setIsAnswerVisible(false);
     } else {
       setIsCompleted(true);
     }
@@ -84,6 +94,7 @@ export const App = () => {
     if (currentCardIndex > 0) {
       setCurrentCardIndex(currentCardIndex - 1);
       setIsFlipped(false);
+      setIsAnswerVisible(false);
     }
   };
   
@@ -91,6 +102,7 @@ export const App = () => {
     setCurrentCardIndex(0);
     setIsFlipped(false);
     setIsCompleted(false);
+    setIsAnswerVisible(false);
   };
   
   const progressPercentage = activeCards.length > 0 ? ((currentCardIndex + 1) / activeCards.length) * 100 : 0;
@@ -104,6 +116,7 @@ export const App = () => {
         categories={CATEGORIES}
         currentCategoryId={selectedCategoryId}
         currentDeckId={selectedDeckId}
+        currentStudyMode={studyMode}
       />
       <main className="bg-blue-50 text-gray-800 min-h-screen flex flex-col items-center p-4 sm:p-6 lg:p-8 relative">
         <header className="text-center mb-4 w-full">
@@ -158,14 +171,25 @@ export const App = () => {
                   </div>
                 </div>
 
-                <Flashcard
-                  question={activeCards[currentCardIndex].question}
-                  answer={activeCards[currentCardIndex].answer}
-                  isFlipped={isFlipped}
-                  onClick={handleFlipCard}
-                  cardNumber={currentCardIndex + 1}
-                  totalCards={activeCards.length}
-                />
+                {studyMode === 'flashcard' ? (
+                  <Flashcard
+                    question={activeCards[currentCardIndex].question}
+                    answer={activeCards[currentCardIndex].answer}
+                    isFlipped={isFlipped}
+                    onClick={handleFlipCard}
+                    cardNumber={currentCardIndex + 1}
+                    totalCards={activeCards.length}
+                  />
+                ) : (
+                  <ExamQuestion
+                    question={activeCards[currentCardIndex].question}
+                    answer={activeCards[currentCardIndex].answer}
+                    isAnswerVisible={isAnswerVisible}
+                    onToggleAnswer={() => setIsAnswerVisible(!isAnswerVisible)}
+                    cardNumber={currentCardIndex + 1}
+                    totalCards={activeCards.length}
+                  />
+                )}
                 
                 <div className="text-center text-gray-600 font-medium text-lg" aria-live="polite">
                   Card {currentCardIndex + 1} de {activeCards.length}
@@ -201,7 +225,8 @@ export const App = () => {
         </section>
         
         <footer className="text-center text-gray-500 mt-8 text-base">
-          <p>Clique no card para virar e ver a resposta.</p>
+          {studyMode === 'flashcard' && <p>Clique no card para virar e ver a resposta.</p>}
+          {studyMode === 'exam' && <p>Use os botões para navegar entre as questões.</p>}
         </footer>
       </main>
     </>

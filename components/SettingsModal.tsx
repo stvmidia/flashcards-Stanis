@@ -5,10 +5,11 @@ import type { Category } from '../types';
 interface SettingsModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSave: (categoryId: string, deckId: string) => void;
+  onSave: (categoryId: string, deckId: string, studyMode: 'flashcard' | 'exam') => void;
   categories: Category[];
   currentCategoryId: string;
   currentDeckId: string;
+  currentStudyMode: 'flashcard' | 'exam';
 }
 
 const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -17,16 +18,18 @@ const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, onSave, categories, currentCategoryId, currentDeckId }) => {
+export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, onSave, categories, currentCategoryId, currentDeckId, currentStudyMode }) => {
   const [tempCategoryId, setTempCategoryId] = useState(currentCategoryId);
   const [tempDeckId, setTempDeckId] = useState(currentDeckId);
+  const [tempStudyMode, setTempStudyMode] = useState(currentStudyMode);
 
   useEffect(() => {
     if (isOpen) {
       setTempCategoryId(currentCategoryId);
       setTempDeckId(currentDeckId);
+      setTempStudyMode(currentStudyMode);
     }
-  }, [isOpen, currentCategoryId, currentDeckId]);
+  }, [isOpen, currentCategoryId, currentDeckId, currentStudyMode]);
 
   if (!isOpen) {
     return null;
@@ -41,7 +44,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, o
   };
 
   const handleSave = () => {
-    onSave(tempCategoryId, tempDeckId);
+    onSave(tempCategoryId, tempDeckId, tempStudyMode);
   };
 
   const selectedCategoryForDecks = categories.find(c => c.id === tempCategoryId);
@@ -74,7 +77,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, o
           {selectedCategoryForDecks && (
             <div>
               <h3 className="block text-lg font-semibold text-gray-700 mb-3">2. Escolha a Prova</h3>
-              <div className="space-y-3 max-h-60 overflow-y-auto pr-2">
+              <div className="space-y-3 max-h-48 overflow-y-auto pr-2">
                 {selectedCategoryForDecks.decks.length > 1 && (
                   <div className="flex items-center">
                     <input
@@ -110,6 +113,42 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, o
               </div>
             </div>
           )}
+
+          <div>
+            <h3 className="block text-lg font-semibold text-gray-700 mb-3">3. Escolha o Modo de Estudo</h3>
+            <div className="space-y-3">
+                <div className="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                    <input
+                      type="radio"
+                      id="mode-flashcard"
+                      name="mode-selection"
+                      value="flashcard"
+                      checked={tempStudyMode === 'flashcard'}
+                      onChange={(e) => setTempStudyMode(e.target.value as 'flashcard' | 'exam')}
+                      className="h-5 w-5 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    />
+                    <label htmlFor="mode-flashcard" className="ml-3 block text-lg text-gray-800 cursor-pointer w-full">
+                      Modo Flashcard
+                      <p className="text-sm text-gray-500 font-normal">Ideal para memorização rápida.</p>
+                    </label>
+                </div>
+                <div className="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                    <input
+                      type="radio"
+                      id="mode-exam"
+                      name="mode-selection"
+                      value="exam"
+                      checked={tempStudyMode === 'exam'}
+                      onChange={(e) => setTempStudyMode(e.target.value as 'flashcard' | 'exam')}
+                      className="h-5 w-5 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    />
+                    <label htmlFor="mode-exam" className="ml-3 block text-lg text-gray-800 cursor-pointer w-full">
+                      Modo Prova
+                      <p className="text-sm text-gray-500 font-normal">Simula a exibição da questão completa.</p>
+                    </label>
+                  </div>
+            </div>
+          </div>
         </main>
         
         <footer className="p-5 bg-gray-50 border-t border-gray-200 flex justify-end gap-4">
