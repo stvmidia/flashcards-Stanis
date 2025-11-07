@@ -162,6 +162,72 @@
                   correctAlternativeIndex: 1
                 }
               ]
+            },
+            {
+              id: 'seas-ro-2022-hist-geo',
+              name: 'Prova SEAS-RO 2022 (5 questões)',
+              cards: [
+                {
+                  question: 'Sobre o Plano Agropecuário e Florestal de Rondônia (Planafloro), é correto afirmar que:',
+                  answer: 'Todas as afirmativas estão corretas. O Planafloro, de 1992, teve parceria federal e estadual, foi incentivado pelo BIRD e sucedeu o Plano Polonoroeste para corrigir suas falhas.',
+                  alternatives: [
+                    'I, II e III.',
+                    'I, apenas.',
+                    'III, apenas.',
+                    'I e II, apenas.',
+                    'II e III, apenas.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  question: 'Sobre o processo de desmatamento em Rondônia, a sequência correta de Verdadeiro (V) e Falso (F) é: ( ) A construção da BR-364 intensificou o desmatamento. ( ) A SEDAM foi criada na década de 1950. ( ) As primeiras Unidades de Conservação foram criadas no primeiro ciclo da borracha.',
+                  answer: 'V, F, F. A BR-364 de fato intensificou o desmatamento. No entanto, a SEDAM foi criada em 1988, e as primeiras UCs são posteriores ao primeiro ciclo da borracha.',
+                  alternatives: [
+                    'V, F, F.',
+                    'F, V, F.',
+                    'V, V, F.',
+                    'F, V, V.',
+                    'V, F, V.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  question: 'Sobre as mesorregiões e microrregiões de Rondônia, qual é a afirmativa correta?',
+                  answer: 'Até o ano de 2017, Rondônia era dividido em duas mesorregiões (Madeira-Guaporé e Leste Rondoniense), mas esta divisão deixou de existir após uma revisão do IBGE.',
+                  alternatives: [
+                    'O Censo 2000 identificou duas mesorregiões e 52 microrregiões.',
+                    'Rondônia passou de oito microrregiões em 1990 para 52 em 2022.',
+                    'Rondônia possui 52 municípios distribuídos em duas mesorregiões.',
+                    'Até o ano de 2017, Rondônia era dividido em duas mesorregiões (Madeira-Guaporé e Leste Rondoniense), mas esta divisão deixou de existir após uma revisão do IBGE.',
+                    'Desde 1964, Rondônia possui duas mesorregiões que se subdividem em seis microrregiões.'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  question: 'Em relação à ocupação do território de Rondônia e sua evolução demográfica, assinale a afirmativa correta.',
+                  answer: 'A ocupação definitiva dos espaços urbanos só ocorreu na segunda metade do século XX, com a explosão demográfica vivenciada durante o período da ditadura militar.',
+                  alternatives: [
+                    'A ocupação urbana acelerou no primeiro Ciclo da Borracha, na primeira metade do século XIX.',
+                    'A maior queda demográfica ocorreu durante a Segunda Guerra Mundial.',
+                    'A ocupação definitiva dos espaços urbanos só ocorreu na segunda metade do século XX, com a explosão demográfica vivenciada durante o período da ditadura militar.',
+                    'O crescimento demográfico foi uniforme no século XX, com pico no início do século XXI.',
+                    'Houve grande crescimento demográfico em 1990, mas um declínio no início do século XXI.'
+                  ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  question: 'Em relação à origem político-administrativa de Rondônia, assinale a afirmativa correta.',
+                  answer: 'Rondônia surgiu a partir do Território Federal do Guaporé, criado por Getúlio Vargas, no contexto da Segunda Guerra Mundial.',
+                  alternatives: [
+                    'Rondônia surgiu do Território Federal de Guajará-Mirim, criado por Aluísio Ferreira.',
+                    'Rondônia surgiu a partir do Território Federal do Guaporé, criado por Getúlio Vargas, no contexto da Segunda Guerra Mundial.',
+                    'Rondônia surgiu do Território Federal do Guaporé, criado por Aluísio Ferreira, que se tornou seu primeiro governador.',
+                    'Rondônia surgiu do Território Federal do Guaporé, criado por João Figueiredo nos anos 1980.',
+                    'Rondônia surgiu do Território Federal de Guajará-Mirim, criado por João Figueiredo nos anos 1960.'
+                  ],
+                  correctAlternativeIndex: 1
+                }
+              ]
             }
           ]
         },
@@ -942,7 +1008,7 @@
         );
 
         const [selectedCategoryId, setSelectedCategoryId] = useState(CATEGORIES[1].id);
-        const [selectedDeckId, setSelectedDeckId] = useState(CATEGORIES[1].decks[0].id);
+        const [selectedDeckId, setSelectedDeckId] = useState(CATEGORIES[1].decks[1].id);
         const [currentCardIndex, setCurrentCardIndex] = useState(0);
         const [isFlipped, setIsFlipped] = useState(false);
         const [isCompleted, setIsCompleted] = useState(false);
