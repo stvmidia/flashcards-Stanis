@@ -1483,7 +1483,7 @@
       };
 
       // --- Component from components/SettingsModal.tsx ---
-      const SettingsModal = ({ isOpen, onClose, onSave, categories, currentCategoryId, currentDeckId, currentStudyMode }) => {
+      const SettingsModal = ({ isOpen, onClose, onSave, categories, currentCategoryId, currentDeckId, currentStudyMode, currentStudyUnstudiedOnly }) => {
         const XIcon = (props) => (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -1493,14 +1493,16 @@
         const [tempCategoryId, setTempCategoryId] = useState(currentCategoryId);
         const [tempDeckId, setTempDeckId] = useState(currentDeckId);
         const [tempStudyMode, setTempStudyMode] = useState(currentStudyMode);
+        const [tempStudyUnstudiedOnly, setTempStudyUnstudiedOnly] = useState(currentStudyUnstudiedOnly);
 
         useEffect(() => {
           if (isOpen) {
             setTempCategoryId(currentCategoryId);
             setTempDeckId(currentDeckId);
             setTempStudyMode(currentStudyMode);
+            setTempStudyUnstudiedOnly(currentStudyUnstudiedOnly);
           }
-        }, [isOpen, currentCategoryId, currentDeckId, currentStudyMode]);
+        }, [isOpen, currentCategoryId, currentDeckId, currentStudyMode, currentStudyUnstudiedOnly]);
 
         if (!isOpen) {
           return null;
@@ -1515,7 +1517,7 @@
         };
 
         const handleSave = () => {
-          onSave(tempCategoryId, tempDeckId, tempStudyMode);
+          onSave(tempCategoryId, tempDeckId, tempStudyMode, tempStudyUnstudiedOnly);
         };
 
         const selectedCategoryForDecks = categories.find(c => c.id === tempCategoryId);
@@ -1620,6 +1622,24 @@
                         </div>
                   </div>
                 </div>
+
+                <div>
+                  <h3 className="block text-lg font-semibold text-gray-700 mb-3">4. Opções Avançadas</h3>
+                  <div className="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                    <input
+                      type="checkbox"
+                      id="study-unstudied"
+                      name="study-unstudied"
+                      checked={tempStudyUnstudiedOnly}
+                      onChange={(e) => setTempStudyUnstudiedOnly(e.target.checked)}
+                      className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label htmlFor="study-unstudied" className="ml-3 block text-lg text-gray-800 cursor-pointer w-full">
+                      Estudar apenas questões não vistas
+                      <p className="text-sm text-gray-500 font-normal">Oculta as questões que você marcar como "estudadas".</p>
+                    </label>
+                  </div>
+                </div>
               </main>
               
               <footer className="p-5 bg-gray-50 border-t border-gray-200 flex justify-end gap-4">
@@ -1642,7 +1662,7 @@
       };
       
       // --- Component from components/HomeScreen.tsx (New) ---
-      const HomeScreen = ({ categories, onStartStudy }) => {
+      const HomeScreen = ({ categories, onStartStudy, studiedCards }) => {
         const [selectedStudyMode, setSelectedStudyMode] = useState('exam');
         const BookOpenIcon = (props) => (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
@@ -1688,38 +1708,62 @@
               <div>
                 <h2 className="text-xl font-bold text-gray-700 mb-4 text-center">2. Escolha a Matéria e a Prova</h2>
                 <div className="space-y-8">
-                  {categories.map(category => (
-                    <div key={category.id} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
-                      <div className="flex items-center gap-3 mb-5">
-                         <div className="bg-blue-100 p-2 rounded-full">
-                            <BookOpenIcon className="w-6 h-6 text-blue-600"/>
-                         </div>
-                         <h3 className="text-2xl font-bold text-gray-800">{category.name}</h3>
-                      </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                         {category.decks.length > 1 && (
-                            <button 
-                                key={`${category.id}-all`}
-                                onClick={() => onStartStudy(category.id, 'all', selectedStudyMode)}
-                                className="group text-left p-4 bg-white rounded-lg hover:bg-blue-500 transition-all border border-gray-200 flex items-center justify-between gap-3 shadow-sm hover:shadow-xl hover:border-blue-500"
+                  {categories.map(category => {
+                      const allDeckCards = category.decks.flatMap(d => d.cards);
+                      const allStudiedCount = allDeckCards.filter(c => studiedCards[c.id]).length;
+                      const allTotalCount = allDeckCards.length;
+
+                    return (
+                      <div key={category.id} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="bg-blue-100 p-2 rounded-full">
+                              <BookOpenIcon className="w-6 h-6 text-blue-600"/>
+                          </div>
+                          <h3 className="text-2xl font-bold text-gray-800">{category.name}</h3>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                          {category.decks.length > 1 && (
+                              <button 
+                                  key={`${category.id}-all`}
+                                  onClick={() => onStartStudy(category.id, 'all', selectedStudyMode)}
+                                  className="group text-left p-4 bg-white rounded-lg hover:bg-blue-500 transition-all border border-gray-200 flex items-start justify-between gap-3 shadow-sm hover:shadow-xl hover:border-blue-500"
+                                >
+                                  <div className="flex-1">
+                                    <p className="font-semibold text-gray-700 group-hover:text-white">Todas as provas de {category.name}</p>
+                                    {allTotalCount > 0 && (
+                                      <p className={`text-sm mt-1 group-hover:text-blue-200 ${allStudiedCount === allTotalCount ? 'text-green-600 font-medium' : 'text-gray-500'}`}>
+                                        {allStudiedCount} de {allTotalCount} estudadas
+                                      </p>
+                                    )}
+                                  </div>
+                                  <PlayCircleIcon className="w-8 h-8 text-blue-400 group-hover:text-white transition-transform transform group-hover:scale-110 flex-shrink-0 mt-1"/>
+                                </button>
+                          )}
+                          {category.decks.map(deck => {
+                            const studiedCount = deck.cards.filter(c => studiedCards[c.id]).length;
+                            const totalCount = deck.cards.length;
+                            return (
+                              <button 
+                                key={deck.id}
+                                onClick={() => onStartStudy(category.id, deck.id, selectedStudyMode)}
+                                className="group text-left p-4 bg-white rounded-lg hover:bg-blue-500 transition-all border border-gray-200 flex items-start justify-between gap-3 shadow-sm hover:shadow-xl hover:border-blue-500"
                               >
-                                <p className="font-semibold text-gray-700 group-hover:text-white flex-1">Todas as provas de {category.name}</p>
-                                <PlayCircleIcon className="w-8 h-8 text-blue-400 group-hover:text-white transition-transform transform group-hover:scale-110"/>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-gray-700 group-hover:text-white">{deck.name}</p>
+                                  {totalCount > 0 && (
+                                    <p className={`text-sm mt-1 group-hover:text-blue-200 ${studiedCount === totalCount ? 'text-green-600 font-medium' : 'text-gray-500'}`}>
+                                      {studiedCount} de {totalCount} estudadas
+                                    </p>
+                                  )}
+                                </div>
+                                <PlayCircleIcon className="w-8 h-8 text-blue-400 group-hover:text-white transition-transform transform group-hover:scale-110 flex-shrink-0 mt-1"/>
                               </button>
-                         )}
-                        {category.decks.map(deck => (
-                          <button 
-                            key={deck.id}
-                            onClick={() => onStartStudy(category.id, deck.id, selectedStudyMode)}
-                            className="group text-left p-4 bg-white rounded-lg hover:bg-blue-500 transition-all border border-gray-200 flex items-center justify-between gap-3 shadow-sm hover:shadow-xl hover:border-blue-500"
-                          >
-                            <p className="font-semibold text-gray-700 group-hover:text-white flex-1">{deck.name}</p>
-                            <PlayCircleIcon className="w-8 h-8 text-blue-400 group-hover:text-white transition-transform transform group-hover:scale-110"/>
-                          </button>
-                        ))}
+                            )
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -1760,8 +1804,20 @@
           </svg>
         );
         
+        const categoriesWithIds = useMemo(() => {
+          return CATEGORIES.map(category => ({
+            ...category,
+            decks: category.decks.map(deck => ({
+              ...deck,
+              cards: deck.cards.map((card, index) => ({
+                ...card,
+                id: `${category.id}-${deck.id}-${index}`
+              }))
+            }))
+          }));
+        }, []);
+        
         const [view, setView] = useState('home');
-
         const [selectedCategoryId, setSelectedCategoryId] = useState(CATEGORIES[1].id);
         const [selectedDeckId, setSelectedDeckId] = useState('novas-ineditas-fgv');
         const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -1770,7 +1826,26 @@
         const [isSettingsOpen, setIsSettingsOpen] = useState(false);
         const [studyMode, setStudyMode] = useState('exam');
         const [isAnswerVisible, setIsAnswerVisible] = useState(false);
+        const [studiedCards, setStudiedCards] = useState(() => {
+            try {
+                const item = window.localStorage.getItem('studiedCards');
+                return item ? JSON.parse(item) : {};
+            } catch (error) {
+                console.error("Error reading from localStorage", error);
+                return {};
+            }
+        });
+        const [studyUnstudiedOnly, setStudyUnstudiedOnly] = useState(false);
         
+        useEffect(() => {
+            try {
+                window.localStorage.setItem('studiedCards', JSON.stringify(studiedCards));
+            } catch (error) {
+                console.error("Error writing to localStorage", error);
+            }
+        }, [studiedCards]);
+
+
         const resetStudyState = () => {
           setCurrentCardIndex(0);
           setIsFlipped(false);
@@ -1791,8 +1866,8 @@
         };
 
         const activeCategory = useMemo(() => 
-          CATEGORIES.find(cat => cat.id === selectedCategoryId) || CATEGORIES[0], 
-          [selectedCategoryId]
+          categoriesWithIds.find(cat => cat.id === selectedCategoryId) || categoriesWithIds[0], 
+          [selectedCategoryId, categoriesWithIds]
         );
         
         const activeDeckName = useMemo(() => {
@@ -1805,16 +1880,34 @@
 
         const activeCards = useMemo(() => {
           if (!activeCategory) return [];
+          
+          let allCards = [];
           if (selectedDeckId === 'all') {
-            return activeCategory.decks.flatMap(deck => deck.cards);
+            allCards = activeCategory.decks.flatMap(deck => deck.cards);
+          } else {
+            allCards = activeCategory.decks.find(deck => deck.id === selectedDeckId)?.cards || [];
           }
-          return activeCategory.decks.find(deck => deck.id === selectedDeckId)?.cards || [];
-        }, [activeCategory, selectedDeckId]);
 
-        const handleSettingsSave = (newCategoryId, newDeckId, newStudyMode) => {
-          if (selectedCategoryId !== newCategoryId || selectedDeckId !== newDeckId) {
+          if (studyUnstudiedOnly) {
+            return allCards.filter(card => !studiedCards[card.id]);
+          }
+          
+          return allCards;
+        }, [activeCategory, selectedDeckId, studyUnstudiedOnly, studiedCards]);
+        
+        useEffect(() => {
+            if (activeCards.length > 0 && currentCardIndex >= activeCards.length) {
+                setIsCompleted(true);
+            } else if (activeCards.length === 0) {
+                 setIsCompleted(false); // Reset completion if no cards are available
+            }
+        }, [activeCards, currentCardIndex]);
+
+        const handleSettingsSave = (newCategoryId, newDeckId, newStudyMode, newStudyUnstudiedOnly) => {
+          if (selectedCategoryId !== newCategoryId || selectedDeckId !== newDeckId || studyUnstudiedOnly !== newStudyUnstudiedOnly) {
             setSelectedCategoryId(newCategoryId);
             setSelectedDeckId(newDeckId);
+            setStudyUnstudiedOnly(newStudyUnstudiedOnly);
             resetStudyState();
           } else if (studyMode !== newStudyMode) {
              setIsFlipped(false);
@@ -1822,8 +1915,6 @@
           }
           
           setStudyMode(newStudyMode);
-          setIsFlipped(false);
-          setIsAnswerVisible(false);
           setIsSettingsOpen(false);
         };
 
@@ -1851,10 +1942,22 @@
           resetStudyState();
         };
         
+        const toggleStudiedStatus = (cardId) => {
+          setStudiedCards(prev => {
+            const newStudied = {...prev};
+            if (newStudied[cardId]) {
+              delete newStudied[cardId];
+            } else {
+              newStudied[cardId] = true;
+            }
+            return newStudied;
+          });
+        };
+        
         const progressPercentage = activeCards.length > 0 ? ((currentCardIndex + 1) / activeCards.length) * 100 : 0;
         
         if (view === 'home') {
-          return <HomeScreen categories={CATEGORIES} onStartStudy={handleStartStudy} />;
+          return <HomeScreen categories={categoriesWithIds} onStartStudy={handleStartStudy} studiedCards={studiedCards} />;
         }
 
         return (
@@ -1863,10 +1966,11 @@
               isOpen={isSettingsOpen}
               onClose={() => setIsSettingsOpen(false)}
               onSave={handleSettingsSave}
-              categories={CATEGORIES}
+              categories={categoriesWithIds}
               currentCategoryId={selectedCategoryId}
               currentDeckId={selectedDeckId}
               currentStudyMode={studyMode}
+              currentStudyUnstudiedOnly={studyUnstudiedOnly}
             />
             <main className="bg-blue-50 text-gray-800 min-h-screen flex flex-col items-center p-4 sm:p-6 lg:p-8 relative">
               <header className="text-center mb-4 w-full">
@@ -1929,6 +2033,20 @@
                           />
                         </div>
                       </div>
+                      
+                      <div className="flex items-center justify-center my-2">
+                          <input
+                              type="checkbox"
+                              id="mark-as-studied"
+                              className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer"
+                              checked={!!studiedCards[activeCards[currentCardIndex].id]}
+                              onChange={() => toggleStudiedStatus(activeCards[currentCardIndex].id)}
+                              aria-label="Marcar como estudado"
+                          />
+                          <label htmlFor="mark-as-studied" className="ml-2 text-gray-700 font-medium cursor-pointer">
+                              Marcar como estudado
+                          </label>
+                      </div>
 
                       {studyMode === 'flashcard' ? (
                         <Flashcard
@@ -1979,10 +2097,17 @@
                     </React.Fragment>
                   )
                 ) : (
-                  <div className="w-full max-w-3xl h-96 sm:h-[28rem] bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col justify-center items-center p-6 text-center">
-                    <h2 className="text-2xl font-semibold text-gray-700">Nenhum card para mostrar.</h2>
-                    <p className="text-gray-500 mt-2">Abra as configurações para selecionar uma matéria e uma prova para estudar.</p>
-                  </div>
+                    <div className="w-full max-w-3xl h-96 sm:h-[28rem] bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col justify-center items-center p-6 text-center animate-fade-in">
+                      <CheckCircleIconForApp className="w-20 h-20 text-green-500 mb-4"/>
+                      <h2 className="text-2xl font-semibold text-gray-700">
+                        {studyUnstudiedOnly ? "Você já estudou tudo!" : "Nenhum card para mostrar."}
+                      </h2>
+                      <p className="text-gray-500 mt-2 max-w-md">
+                        {studyUnstudiedOnly 
+                          ? "Desative o filtro 'Estudar apenas não vistas' nas configurações para revisar as questões." 
+                          : "Abra as configurações para selecionar uma matéria e uma prova para estudar."}
+                      </p>
+                    </div>
                 )}
               </section>
               
