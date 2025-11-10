@@ -512,7 +512,7 @@
                 },
                 {
                   question: "(Simulada - Estilo FGV) A Comissão Rondon é fundamental na história de Rondônia. Além de sua política indigenista, sua expedição (1907-1915) tinha um objetivo estratégico de integração nacional para o governo republicano. Esse objetivo prático era:",
-                  shortQuestion: "Qual era o objetivo prático e estratégico da expedição da Comissão Rondon (1907-1915)?",
+                  shortQuestion: "Qual era o objetivo prático e estratégico da expedição da Comissão Rondon (1907-2015)?",
                   answer: "Instalar uma linha telegráfica que ligasse Cuiabá a Santo Antônio do Madeira (Porto Velho) e, posteriormente, ao Acre.",
                   alternatives: [
                     "mapear as reservas de cassiterita para exploração industrial.",
@@ -1417,9 +1417,9 @@
         return (
           <div className="w-full max-w-3xl min-h-96 sm:min-h-[28rem] h-auto bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col justify-start items-center p-6 text-center animate-fade-in">
             <div className="absolute top-4 right-4 text-sm font-medium text-gray-400" aria-hidden="true">{cardNumber} / {totalCards}</div>
-            <div className="w-full flex-grow flex flex-col justify-center items-center overflow-y-auto py-4">
+            <div className="w-full flex-grow flex flex-col justify-start items-center overflow-y-auto py-4">
               <h2 className="text-base font-bold text-blue-500 uppercase tracking-wider mb-4">Pergunta</h2>
-              <p className="w-full text-gray-800 text-xl sm:text-2xl font-semibold text-center">{question}</p>
+              <p className="w-full text-gray-800 text-lg text-left whitespace-pre-wrap">{question}</p>
 
               {hasAlternatives && (
                 <div className="w-full text-left mt-8 space-y-3">
