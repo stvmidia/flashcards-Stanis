@@ -1,4 +1,6 @@
-export const CATEGORIES = [
+import { Category } from './types.ts';
+
+export const CATEGORIES: Category[] = [
         {
           id: 'informatica',
           name: 'Informática',
@@ -8,18 +10,22 @@ export const CATEGORIES = [
               name: 'Conceitos Gerais (4 questões)',
               cards: [
                 {
+                  id: '',
                   question: 'O que é um firewall?',
                   answer: 'Um dispositivo de segurança de rede que monitora o tráfego de rede de entrada e saída e decide permitir ou bloquear tráfegos específicos com base em um conjunto definido de regras de segurança.'
                 },
                 {
+                  id: '',
                   question: 'Qual a diferença entre RAM e ROM?',
                   answer: 'RAM (Random Access Memory) é volátil e usada para armazenamento temporário de dados. ROM (Read-Only Memory) é não-volátil e armazena o firmware do sistema.'
                 },
                 {
+                  id: '',
                   question: 'O que significa a sigla HTTP?',
                   answer: 'Hypertext Transfer Protocol. É o protocolo usado para transferir dados pela web.'
                 },
                 {
+                  id: '',
                   question: 'O que é um ataque de Phishing?',
                   answer: 'Uma tentativa de obter informações sensíveis, como nomes de usuário, senhas e detalhes de cartão de crédito, disfarçando-se como uma entidade confiável em uma comunicação eletrônica.'
                 }
@@ -36,6 +42,7 @@ export const CATEGORIES = [
               name: 'Prova DPE-RO 2025 (10 questões)',
               cards: [
                 {
+                  id: '',
                   question: 'No Tratado de Madri, firmado em 1750, a área de domínio da aliança luso-Tupi-Guarani se transformava em unidade reconhecida juridicamente pelo direito internacional e identificada pelo nome de Brasil. Os muitos atos tidos até a véspera como impróprios ou ilegais adquiriram o estatuto de atos fundadores do domínio jurídico. (CALDEIRA, Jorge. História da riqueza no Brasil. Rio de Janeiro: Estação Brasil, 2017. Adaptado.) O Tratado de Madri foi um marco no estabelecimento e reconhecimento formal do território brasileiro no século XVIII. É correto afirmar que o tratado:',
                   shortQuestion: "Qual a principal característica do Tratado de Madri (1750) na definição do território brasileiro?",
                   answer: 'Baseou-se na posse efetiva da terra como critério para definir os limites territoriais, consolidando a expansão portuguesa na América.',
@@ -49,6 +56,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: 'Segundo o antropólogo Darcy Ribeiro, a inovação do pensamento do marechal Cândido Rondon foi "o estabelecimento pioneiro do princípio, só hoje reconhecido internacionalmente, do direito à diferença". Essa afirmação se baseia:',
                   shortQuestion: "Em que se baseia a afirmação de Darcy Ribeiro de que Cândido Rondon foi pioneiro no 'direito à diferença'?",
                   answer: 'Na defesa de uma política de contato pacífico e proteção territorial dos indígenas, garantindo sua autonomia dentro do Estado brasileiro.',
@@ -62,6 +70,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 4
                 },
                 {
+                  id: '',
                   question: 'O acoplamento entre a extração e a coagulação do látex da Hevea brasiliensis na Amazônia e a demanda crescente pelo produto devido à emergente Revolução Industrial nos EUA e na Europa Ocidental deu início ao Ciclo da Borracha. O auge desse mercado exportador ocorreu entre os anos de 1879 e 1912, quando então se iniciou sua derrocada. Entre os motivos da falência do ciclo, é correto indicar:',
                   shortQuestion: "Qual foi um dos principais motivos para a falência do Ciclo da Borracha na Amazônia?",
                   answer: 'A concorrência da borracha produzida em plantações na Ásia, onde o cultivo em larga escala reduziu os custos e suplantou o produto amazônico.',
@@ -75,6 +84,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: 'O Real Forte Príncipe da Beira foi edificado pelos portugueses às margens do Rio Guaporé no século XVIII. Situava-se na então Capitania de Mato Grosso, a oeste da demarcação do Tratado de Tordesilhas. Sua principal finalidade foi:',
                   shortQuestion: "Qual foi a principal finalidade da construção do Real Forte Príncipe da Beira no século XVIII?",
                   answer: 'Garantir a soberania portuguesa sobre a região fronteiriça e impedir avanços espanhóis, consolidando o domínio lusitano na área.',
@@ -88,6 +98,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 3
                 },
                 {
+                  id: '',
                   question: "O Território Federal de Rondônia passou oficialmente à condição de estado em 1982. Sobre esse tema, analise os itens a seguir. I. O crescimento populacional e econômico acelerado entre as décadas de 1960 e 1980, impulsionado pela migração e pela expansão agropecuária. II. A necessidade de maior autonomia política e financeira, permitindo ao governo local arrecadar impostos e administrar melhor seus desafios. III. A estabilização ambiental e o controle da ocupação territorial na Amazônia, que garantiram um crescimento sustentável na região. Foi motivo para a emancipação de Rondônia o que se afirma em:",
                   shortQuestion: "Quais foram os motivos para a emancipação de Rondônia a estado em 1982?",
                   answer: 'Apenas os itens I e II estão corretos. O crescimento populacional/econômico e a busca por autonomia política/financeira foram os motivos para a emancipação.',
@@ -101,6 +112,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: "Com relação aos aspectos físicos da geografia do estado de Rondônia, assinale V para a afirmativa verdadeira e F para a falsa. () A maior parte do estado se encontra sobre o Planalto Residual do Guaporé, formação geológica de altitude média. () O estado abriga zonas de várzeas fluviais e baixas altitudes, como a Depressão da Amazônia Ocidental. () O norte do estado é marcado pela Serra dos Pacaás Novos, cadeia montanhosa elevada que integra um parque nacional. As afirmativas são, respectivamente,",
                   shortQuestion: "Sobre a geografia de Rondônia, qual a sequência correta de V/F para as afirmativas sobre Planalto Residual do Guaporé, várzeas fluviais e Serra dos Pacaás Novos?",
                   answer: "F-F-V. A sequência correta, de acordo com o gabarito, é Falso, Falso, Verdadeiro.",
@@ -114,6 +126,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 4
                 },
                 {
+                  id: '',
                   question: "Em 2021, uma menina indígena de Rondônia ganhou notoriedade ao discursar na abertura oficial da Conferência da Cúpula do Clima (COP26), denunciando a ameaça das mudanças climáticas e o papel dos povos indígenas. Ela é uma liderança do povo:",
                   shortQuestion: "A qual povo pertence a jovem liderança indígena de Rondônia que discursou na COP26 em 2021?",
                   answer: 'Suruí.',
@@ -127,6 +140,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 0
                 },
                 {
+                  id: '',
                   question: "Rondônia apresenta uma diversidade ambiental singular, marcada pela interação entre distintas formações naturais. O bioma de maior território no estado é:",
                   shortQuestion: "Qual é o principal bioma presente no estado de Rondônia?",
                   answer: 'A Amazônia.',
@@ -140,6 +154,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 0
                 },
                 {
+                  id: '',
                   question: "Com relação à Bacia do Rio Madeira, analise os itens a seguir. I. É o rio de maior vazão do estado de Rondônia e um dos mais caudalosos do mundo, destacando-se como principal afluente meridional do Rio Amazonas. II. Separa Rondônia da Bolívia e atua como principal via de transporte inter-regional, conectando áreas remotas ao sistema logístico da Amazônia. III. Abriga os complexos hidrelétricos de Santo Antônio e Jirau, integrantes do Sistema Interligado Nacional, que fornecem energia para várias regiões do Brasil. Em relação ao Rio Madeira, está correto o que se afirma em:",
                   shortQuestion: "Sobre o Rio Madeira, quais afirmativas sobre sua vazão, fronteira e hidrelétricas estão corretas?",
                   answer: 'Apenas os itens I e III estão corretos. O Rio Madeira é de fato um dos mais caudalosos e abriga as hidrelétricas. O rio que faz fronteira com a Bolívia é o Guaporé-Mamoré.',
@@ -153,6 +168,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "Rondônia desempenha papel estratégico em exportações, potencializado por sua localização geográfica privilegiada, aliada a corredores logísticos dinâmicos e uma rede multimodal de transporte. A principal commodity exportada pelo estado é:",
                   shortQuestion: "Qual é a principal commodity exportada por Rondônia?",
                   answer: 'A carne bovina.',
@@ -172,6 +188,7 @@ export const CATEGORIES = [
               name: 'Prova PGE-RO 2015 (7 questões)',
               cards: [
                 {
+                  id: '',
                   question: 'Ao longo dos séculos XVI e XVII, durante o período da União Ibérica (1580/1640), verificamos o principal momento na expansão territorial brasileira. O país saiu de uma faixa litorânea para um tamanho continental e tal processo levou à incorporação do território correspondente à atual região norte. Sobre o processo de desbravamento da região norte, incluindo a área do estado de Rondônia, pode-se destacar dois grupos essenciais para o sucesso da ampliação territorial brasileira, que foram:',
                   shortQuestion: "Quais grupos foram essenciais para a expansão territorial brasileira na região norte durante a União Ibérica?",
                   answer: 'Os bandeirantes que visavam escravizar os indígenas e as missões jesuítas.',
@@ -185,6 +202,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 3
                 },
                 {
+                  id: '',
                   question: 'O crescimento da população de Rondônia ganhou destaque a partir da década de 1960. Em 1950, a população do antigo território do Guaporé era de cerca de 14 mil habitantes, enquanto em 1980 esse número chegava próximo a 230 mil habitantes. O intenso crescimento populacional nesse período é explicado principalmente:',
                   shortQuestion: "Qual o principal motivo do intenso crescimento populacional de Rondônia a partir da década de 1960?",
                   answer: 'Pelo acesso fácil à terra, de baixo custo, que atraiu investidores do sul e do sudeste interessados em investir na agropecuária e na atividade madeireira.',
@@ -198,6 +216,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: 'A descrição: "A monumental construção de estilo Vauban, de 6ª classe, é constituída por um quadrado de 970 metros de perímetro, com muralhas de 10 metros de altura e com quatro baluartes de 59x43m, armados cada um com quatorze (14) canhoneiras. Circundando-a existia um longo e profundo fosso, sendo que o acesso ao interior da fortaleza só será possível através de ponte elevadiça que conduzia a porta da muralha norte". (Fonte: http://www.geocities.ws/rondonianaweb) se refere ao:',
                   shortQuestion: "A qual monumento se refere a descrição 'A monumental construção de estilo Vauban...'?",
                   answer: 'Real Forte Príncipe da Beira, construído para afastar as pretensões dos espanhóis sobre o Vale do Guaporé-Mamoré.',
@@ -211,6 +230,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 3
                 },
                 {
+                  id: '',
                   question: 'A declaração "O barril de pólvora está lá, basta que alguém risque o palito de fósforo para a gente ter uma nova tragédia", do Procurador da República Reginaldo Trindade, diz respeito à problemática envolvendo a Terra Indígena dos Cinta Larga. Em relação à localização dessas terras e à problemática existente atualmente nelas, é correto afirmar que:',
                   shortQuestion: "Qual a problemática e localização da Terra Indígena dos Cinta Larga?",
                   answer: 'Está localizada na porção leste do Estado, onde as invasões de garimpeiros têm gerado conflitos com os indígenas que vivem ali.',
@@ -224,6 +244,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 4
                 },
                 {
+                  id: '',
                   question: 'Ao final do século XIX, o Vale do Madeira foi responsável por um período de avanço econômico e prosperidade para a região. Essa prosperidade foi contínua até o início do século XX. Tal desenvolvimento foi gerado pela:',
                   shortQuestion: "O que gerou o desenvolvimento econômico do Vale do Madeira no final do século XIX?",
                   answer: 'Extração da borracha, que atraiu mão de obra migrante para a região.',
@@ -237,6 +258,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: 'A BR-319 foi inaugurada oficialmente em 1976, no governo Ernesto Geisel. Porém, nunca foi concluída integralmente. Nas décadas de 1980 e 1990, a manutenção da estrada foi abandonada pelo poder público. Somente na década de 2000, as obras de pavimentação foram retomadas com o asfaltamento das duas pontas da rodovia. A importância da rodovia citada no texto está relacionada ao fato de ser a via de integração por terra:',
                   shortQuestion: "Qual a importância da rodovia BR-319?",
                   answer: 'Entre Porto Velho e Manaus.',
@@ -250,6 +272,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 0
                 },
                 {
+                  id: '',
                   question: 'No estado de Rondônia, os problemas de degradação socioambiental são muito presentes e estão associados à implantação dos projetos de colonização, principalmente na década de 1970. Como forma de amenizar esses problemas, em 1981 foi criado um programa voltado, dentre outros objetivos, a assegurar o crescimento da produção em harmonia com as preocupações de preservação do sistema ecológico e de proteção às comunidades indígenas, conhecido como:',
                   shortQuestion: "Qual programa foi criado em 1981 para amenizar os problemas socioambientais da colonização em Rondônia?",
                   answer: 'Programa Integrado de Desenvolvimento do Noroeste do Brasil.',
@@ -269,6 +292,7 @@ export const CATEGORIES = [
               name: 'Questões Simuladas FGV (13 questões)',
               cards: [
                 {
+                  id: '',
                   question: "A construção da Estrada de Ferro Madeira-Mamoré (EFMM) é indissociável das relações diplomáticas do Brasil no início do século XX. Sua edificação foi uma contrapartida exigida pelo Tratado de Petrópolis (1903) para que o Brasil:",
                   shortQuestion: "A construção da EFMM foi uma contrapartida do Tratado de Petrópolis (1903) para que o Brasil fizesse o quê?",
                   answer: 'Ficasse com o território do Acre, anteriormente pertencente à Bolívia.',
@@ -282,6 +306,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 0
                 },
                 {
+                  id: '',
                   question: 'O "Segundo Ciclo da Borracha" (1942-1945) foi um fenômeno curto, mas de profundo impacto social. A mão de obra utilizada, conhecida como "Soldados da Borracha", era composta principalmente por:',
                   shortQuestion: "Quem eram os 'Soldados da Borracha' durante o Segundo Ciclo da Borracha (1942-1945)?",
                   answer: 'Migrantes nordestinos recrutados pelo governo Vargas para suprir a demanda de guerra dos Aliados.',
@@ -295,6 +320,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 3
                 },
                 {
+                  id: '',
                   question: 'A criação do Território Federal do Guaporé em 1943, desmembrado do Amazonas e do Mato Grosso, não foi um ato isolado. Ela se insere na política do governo Getúlio Vargas conhecida como:',
                   shortQuestion: "A criação do Território Federal do Guaporé em 1943 fazia parte de qual política do governo Getúlio Vargas?",
                   answer: 'Marcha para o Oeste, que buscava integrar e povoar as fronteiras do país.',
@@ -308,6 +334,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: `"Se a extração da borracha foi a 'febre' do início do século XX, a cassiterita (minério de estanho) foi a 'corrida do ouro' de meados do século. A descoberta de grandes reservas transformou a paisagem e atraiu milhares de garimpeiros, criando um ambiente por vezes chamado de 'Inferno Verde'." O polo central desse ciclo econômico, que se tornou conhecido como a "capital mundial do estanho", foi a região de:`,
                   shortQuestion: "Qual região de Rondônia se tornou o polo do ciclo da cassiterita, sendo conhecida como a 'capital mundial do estanho'?",
                   answer: 'Ariquemes.',
@@ -321,6 +348,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 4
                 },
                 {
+                  id: '',
                   question: "A ocupação dirigida de Rondônia nos anos 1970 foi implementada pelo INCRA através dos Projetos Integrados de Colonização (PIC), como o PIC Ouro Preto. O modelo de assentamento adotado nesses projetos caracterizava-se:",
                   shortQuestion: "Como se caracterizava o modelo de assentamento dos Projetos Integrados de Colonização (PIC) do INCRA em Rondônia nos anos 1970?",
                   answer: 'Pela distribuição de lotes rurais ao longo de estradas vicinais (linhas) que partiam da BR-364, num padrão conhecido como "espinha de peixe".',
@@ -334,6 +362,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: 'A rápida "colonização agropastoril" de Rondônia, especialmente nas décadas de 1970 e 1980, gerou graves "questões socioambientais". O principal conflito fundiário desse período estava relacionado:',
                   shortQuestion: "Qual era o principal conflito fundiário em Rondônia durante a colonização agropastoril das décadas de 1970 e 1980?",
                   answer: 'À "grilagem" de terras, com falsificação de títulos, e à expulsão violenta de posseiros, indígenas e seringueiros por grandes fazendeiros.',
@@ -347,6 +376,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: 'A geografia econômica de Rondônia não é uniforme. A região conhecida como "Cone Sul" (municípios como Vilhena e Cerejeiras) se destaca como o principal polo estadual de:',
                   shortQuestion: "A região do 'Cone Sul' de Rondônia (Vilhena, Cerejeiras) se destaca economicamente em qual atividade?",
                   answer: 'Agricultura de grãos, especialmente soja e milho, devido ao solo e à proximidade com o Mato Grosso.',
@@ -360,6 +390,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 3
                 },
                 {
+                  id: '',
                   question: 'Sobre os impactos socioambientais da implantação das Usinas Hidrelétricas de Santo Antônio e Jirau, no Rio Madeira, analise os itens a seguir. I. Sendo usinas de "fio d\'água", não houve formação de grandes reservatórios, minimizando o impacto em deslocamentos populacionais e na fauna. II. A obra atraiu um intenso fluxo migratório para Porto Velho, gerando pressão sobre os serviços públicos de saúde, moradia e segurança. III. A alteração do regime de cheias do rio e a interrupção da migração de grandes peixes (piracema) afetaram diretamente a vida das comunidades ribeirinhas. Está correto o que se afirma em:',
                   shortQuestion: "Sobre os impactos das usinas de Santo Antônio e Jirau, quais afirmativas sobre reservatórios, migração e piracema estão corretas?",
                   answer: "Apenas os itens II e III estão corretos. A afirmativa I é incorreta pois, apesar de serem 'fio d'água', houve sim formação de reservatórios e impactos significativos em deslocamentos e na fauna.",
@@ -373,6 +404,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "Com relação aos aspectos geológicos e de relevo de Rondônia, assinale V para a afirmativa verdadeira e F para a falsa. () O relevo é predominantemente montanhoso, com altitudes que superam os 2.000 metros na fronteira com o Amazonas. () A maior parte do território assenta-se sobre o Escudo Brasileiro (complexo cristalino), o que explica a riqueza mineral, como a cassiterita. () As planícies sedimentares recentes são encontradas nas margens dos grandes rios, como o Madeira e o Guaporé, formando áreas de várzea. As afirmativas são, respectivamente,",
                   shortQuestion: "Sobre geologia e relevo de Rondônia, qual a sequência V/F correta para as afirmativas sobre relevo montanhoso, Escudo Brasileiro e planícies sedimentares?",
                   answer: 'F-V-V. O relevo não é predominantemente montanhoso. A maior parte do território está sobre o Escudo Brasileiro, e há planícies sedimentares nas margens dos rios.',
@@ -385,6 +417,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: 'Enquanto a BR-319 (mencionada na prova da PGE-RO) representa um desafio de engenharia para ligar Porto Velho a Manaus (AM), a BR-364 é considerada a "espinha dorsal" do estado de Rondônia. Sua importância estratégica deve-se ao fato de:',
                   shortQuestion: "Qual a importância estratégica da rodovia BR-364, a 'espinha dorsal' de Rondônia?",
                   answer: 'Ser a única via pavimentada que liga Rondônia ao estado do Mato Grosso e, consequentemente, às regiões Sul e Sudeste do Brasil.',
@@ -398,6 +431,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 0
                 },
                 {
+                  id: '',
                   question: "Embora a carne bovina e a soja sejam as *commodities* mais famosas (como cobrado na prova da DPE-RO), Rondônia tem se destacado nacionalmente em outra atividade agropecuária:",
                   shortQuestion: "Além da carne bovina e da soja, em qual outra atividade agropecuária Rondônia se destaca nacionalmente?",
                   answer: 'A maior produção de peixe nativo em cativeiro (piscicultura), especialmente o tambaqui.',
@@ -411,6 +445,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: 'Além dos povos indígenas (como os Suruí e os Cinta Larga) e dos ribeirinhos, as "populações tradicionais" de Rondônia incluem comunidades quilombolas. Elas estão concentradas historicamente:',
                   shortQuestion: "Onde as comunidades quilombolas de Rondônia estão historicamente concentradas?",
                   answer: 'No Vale do Guaporé, formadas por descendentes de escravizados que fugiram da mineração no século XVIII.',
@@ -424,6 +459,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "A Assembleia Legislativa do Estado de Rondônia (ALE-RO), órgão para o qual você está prestando concurso, teve sua primeira legislatura instalada e sua primeira Constituição Estadual promulgada no ano de:",
                   shortQuestion: "Em que ano foi promulgada a primeira Constituição Estadual de Rondônia e instalada sua primeira legislatura?",
                   answer: '1983 (Após as eleições de 1982).',
@@ -440,9 +476,10 @@ export const CATEGORIES = [
             },
             {
               id: 'novas-ineditas-fgv',
-              name: 'Questões Inéditas FGV (30 questões)',
+              name: 'Questões Inéditas FGV (15 questões)',
               cards: [
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) O Real Forte Príncipe da Beira (1776) foi a maior edificação militar portuguesa na América colonial. Além de sua óbvia função de defesa da fronteira contra os espanhóis, o Forte cumpria um papel econômico crucial na região do Vale do Guaporé no século XVIII. Esse papel era:",
                   shortQuestion: "Qual era o papel econômico do Real Forte Príncipe da Beira no século XVIII?",
                   answer: "Funcionar como um entreposto fiscal e comercial para o controle da mineração de ouro e da coleta das \"drogas do sertão\".",
@@ -456,6 +493,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) A Estrada de Ferro Madeira-Mamoré (EFMM) foi concluída em 1912. No entanto, ela é historicamente considerada um \"fracasso econômico\" em seus objetivos iniciais. Isso se deve, principalmente, ao fato de que:",
                   shortQuestion: "Por que a Estrada de Ferro Madeira-Mamoré (EFMM) é considerada um 'fracasso econômico'?",
                   answer: "Sua conclusão coincidiu exatamente com o colapso do Primeiro Ciclo da Borracha, causado pela concorrência asiática.",
@@ -469,6 +507,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) A Comissão Rondon é fundamental na história de Rondônia. Além de sua política indigenista, sua expedição (1907-1915) tinha um objetivo estratégico de integração nacional para o governo republicano. Esse objetivo prático era:",
                   shortQuestion: "Qual era o objetivo prático e estratégico da expedição da Comissão Rondon (1907-2015)?",
                   answer: "Instalar uma linha telegráfica que ligasse Cuiabá a Santo Antônio do Madeira (Porto Velho) e, posteriormente, ao Acre.",
@@ -482,6 +521,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 4
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) No período colonial (século XVIII), a economia do Vale do Guaporé e do Vale do Madeira não se resumia à presença militar. A principal atividade econômica que atraiu a cobiça portuguesa para a região, além da busca por ouro, foi:",
                   shortQuestion: "Qual atividade econômica, além do ouro, atraiu a cobiça portuguesa para o Vale do Guaporé no séc. XVIII?",
                   answer: "A coleta das \"drogas do sertão\" (cacau, poaia, castanha) e o apresamento de indígenas.",
@@ -495,6 +535,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) Sobre os dois Ciclos da Borracha em Rondônia, analise as afirmativas a seguir. I. O Primeiro Ciclo (1879-1912) foi marcado por migração espontânea, especialmente de nordestinos, e terminou devido à concorrência asiática. II. O Segundo Ciclo (1942-1945) foi um evento planejado pelo governo Vargas (Acordos de Washington), usando mão de obra recrutada (Soldados da Borracha) para fins de guerra. III. Ambos os ciclos utilizaram a EFMM como principal meio de transporte, o que garantiu o baixo custo da produção. Está correto o que se afirma em:",
                   shortQuestion: "Sobre os Ciclos da Borracha em Rondônia, quais afirmativas estão corretas?",
                   answer: "Apenas I e II. O item III é falso; a EFMM só funcionou no fim do Primeiro Ciclo e estava desativada no Segundo.",
@@ -508,6 +549,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) A criação do Território Federal do Guaporé, em 1943, foi um ato geopolítico da \"Marcha para o Oeste\" de Getúlio Vargas. O território foi formado a partir de áreas desmembradas de dois estados vizinhos:",
                   shortQuestion: "O Território Federal do Guaporé foi formado a partir de áreas de quais dois estados vizinhos?",
                   answer: "Amazonas e Mato Grosso.",
@@ -521,6 +563,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) O Ciclo da Cassiterita (1950-1980) redefiniu a economia de Rondônia. Embora tenha gerado riqueza, sua principal consequência socioeconômica foi:",
                   shortQuestion: "Qual foi a principal consequência socioeconômica do Ciclo da Cassiterita em Rondônia?",
                   answer: "O desenvolvimento de uma economia extrativista desordenada (garimpo), atraindo milhares de migrantes e gerando graves conflitos fundiários.",
@@ -534,6 +577,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) A colonização agrícola dos anos 1970, promovida pelo governo militar e pelo INCRA, foi impulsionada por um slogan que se tornou famoso. Esse slogan e a principal origem dos migrantes atraídos por ele eram, respectivamente:",
                   shortQuestion: "Qual o slogan e a origem dos migrantes da colonização agrícola de RO nos anos 1970?",
                   answer: "\"Terra sem homens para homens sem terra\" / migrantes do Sul (Paraná, RS) e Sudeste (ES, MG).",
@@ -547,6 +591,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) A BR-364 é a \"espinha dorsal\" de Rondônia. Sobre ela, é correto afirmar que:",
                   shortQuestion: "O que é correto afirmar sobre a importância da BR-364 para Rondônia?",
                   answer: "Seu asfaltamento nos anos 1980, financiado pelo Banco Mundial (no âmbito do POLONOROESTE), foi o fator logístico que viabilizou a migração em massa.",
@@ -560,6 +605,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) O processo de transição de Território Federal para Estado (1981) foi complexo. A figura política nomeada pelo regime militar como o último Governador do Território e que se tornou o primeiro Governador do novo Estado de Rondônia foi:",
                   shortQuestion: "Quem foi o último Governador do Território e o primeiro do Estado de Rondônia?",
                   answer: "Jorge Teixeira de Oliveira (\"Teixeirão\").",
@@ -573,6 +619,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) Em relação à geografia física de Rondônia, assinale a afirmativa correta sobre seu relevo e geologia.",
                   shortQuestion: "Qual a afirmativa correta sobre o relevo e geologia de Rondônia?",
                   answer: "A maior parte do relevo é formada por planaltos (como a Chapada dos Parecis ao sul) e depressões, com o subsolo rico em minerais (Escudo Brasileiro).",
@@ -586,6 +633,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 3
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) A hidrografia de Rondônia é um de seus maiores ativos. Sobre os rios do estado, assinale a afirmativa INCORRETA.",
                   shortQuestion: "Qual afirmativa sobre a hidrografia de Rondônia é INCORRETA?",
                   answer: "O Rio Amazonas atravessa o norte do estado de Rondônia, sendo a principal via de acesso a Porto Velho.",
@@ -599,6 +647,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 4
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) O clima predominante em Rondônia é o Equatorial quente e úmido (Am). No entanto, um fenômeno climático específico afeta a região, principalmente nos meses de inverno (junho/julho), causando quedas bruscas de temperatura. Esse fenômeno é conhecido como:",
                   shortQuestion: "Como se chama o fenômeno de queda brusca de temperatura no inverno em Rondônia?",
                   answer: "Friagem.",
@@ -612,6 +661,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 2
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) Rondônia é um dos estados que compõem o \"Arco do Desmatamento\". Em resposta a isso, uma extensa rede de áreas protegidas foi criada. No contexto dos conflitos de terra, as Unidades de Conservação (UCs) e Terras Indígenas (TIs):",
                   shortQuestion: "No contexto do 'Arco do Desmatamento', qual o papel das Unidades de Conservação e Terras Indígenas em Rondônia?",
                   answer: "Funcionam como barreiras (embora constantemente ameaçadas) contra o avanço da fronteira agropecuária, da grilagem e da extração ilegal de madeira.",
@@ -625,6 +675,7 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: "(Simulada - Estilo FGV) Embora a pecuária bovina e a soja sejam as atividades mais visíveis do agronegócio em Rondônia, o estado também é um dos maiores produtores nacionais de outra cultura agrícola, que se adaptou muito bem ao clima e solo local, especialmente na região de Cacoal. Trata-se do:",
                   shortQuestion: "Além da pecuária e soja, Rondônia é um dos maiores produtores de qual outra cultura agrícola?",
                   answer: "Café (principalmente da variedade Robusta/Conilon).",
@@ -636,123 +687,6 @@ export const CATEGORIES = [
                     "Laranja."
                   ],
                   correctAlternativeIndex: 1
-                },
-                {
-                  question: "(Simulada - Estilo FGV) Rondônia se consolidou como o maior produtor de peixe nativo em cativeiro do Brasil. O principal fator que impulsionou a piscicultura no estado foi:",
-                  shortQuestion: "Qual foi o principal fator que impulsionou a piscicultura de peixe nativo em Rondônia?",
-                  answer: "O incentivo ao uso de pequenas propriedades (remanescentes dos PICs) e a escavação de tanques (\"açudes\") para a criação de espécies como o Tambaqui.",
-                  alternatives: [
-                    "a tradição dos migrantes japoneses, que trouxeram a técnica de cultivo de carpas.",
-                    "o aproveitamento dos lagos formados pelas usinas de Santo Antônio e Jirau.",
-                    "o incentivo ao uso de pequenas propriedades (remanescentes dos PICs) e a escavação de tanques (\"açudes\") para a criação de espécies como o Tambaqui.",
-                    "a proibição total da pesca nos rios, forçando a criação em cativeiro.",
-                    "a exportação de peixes ornamentais para a Europa."
-                  ],
-                  correctAlternativeIndex: 2
-                },
-                {
-                  question: "(Simulada - Estilo FGV) A demografia de Rondônia é marcada por fluxos migratórios. A ocupação das décadas de 1970 e 1980, majoritariamente de origem Sul/Sudeste, concentrou-se:",
-                  shortQuestion: "Onde se concentrou a ocupação migratória em Rondônia nas décadas de 1970 e 1980?",
-                  answer: "No \"Cone Sul\" (Vilhena) e na Zona da Mata (Cacoal, Rolim de Moura) e ao longo da BR-364 (Ji-Paraná, Ouro Preto), para a agricultura.",
-                  alternatives: [
-                    "no Vale do Guaporé, para trabalhar nas fazendas de gado mais antigas.",
-                    "em Porto Velho e Guajará-Mirim, para reativar a EFMM.",
-                    "no \"Cone Sul\" (Vilhena) e na Zona da Mata (Cacoal, Rolim de Moura) e ao longo da BR-364 (Ji-Paraná, Ouro Preto), para a agricultura.",
-                    "exclusivamente na capital, Porto Velho, para trabalhar na construção das hidrelétricas.",
-                    "na fronteira com o Acre, para explorar a borracha."
-                  ],
-                  correctAlternativeIndex: 2
-                },
-                {
-                  question: "(Simulada - Estilo FGV) Sobre o \"Arco do Desmatamento\" e as \"questões socioambientais\" (termos do edital ALE-RO), assinale a afirmativa correta:",
-                  shortQuestion: "Qual a definição correta de 'Arco do Desmatamento'?",
-                  answer: "Refere-se a uma área de intensa atividade agrícola e pecuária que avança sobre a floresta, causando altas taxas de desflorestamento e conflitos fundiários.",
-                  alternatives: [
-                    "É um fenômeno natural de desertificação da floresta que ocorre sem intervenção humana.",
-                    "Refere-se a uma área de intensa atividade agrícola e pecuária que avança sobre a floresta, causando altas taxas de desflorestamento e conflitos fundiários.",
-                    "Foi um projeto do governo na década de 1970 para criar um cinturão de proteção ao redor da Amazônia.",
-                    "É o nome dado à área inundada pelas hidrelétricas do Rio Madeira.",
-                    "É uma área onde o desmatamento foi totalmente zerado e revertido, servindo de modelo para o mundo."
-                  ],
-                  correctAlternativeIndex: 1
-                },
-                {
-                  question: "(Simulada - Estilo FGV) O edital da ALE-RO menciona a \"História do Poder Legislativo de Rondônia\". Antes de se tornar Estado, o Território Federal possuía um órgão legislativo com poderes limitados, que era:",
-                  shortQuestion: "Qual era o órgão legislativo do Território Federal de Rondônia antes de se tornar Estado?",
-                  answer: "A Assembleia Territorial, cujos membros eram em parte eleitos e em parte nomeados.",
-                  alternatives: [
-                    "o Senado Federal, que legislava diretamente sobre o Território.",
-                    "a Assembleia Territorial, cujos membros eram em parte eleitos e em parte nomeados.",
-                    "o Conselho de Intendência Municipal de Porto Velho.",
-                    "o Parlamento Indígena, que representava as etnias locais.",
-                    "o Território Federal não possuía nenhum tipo de órgão legislativo, sendo governado por decreto."
-                  ],
-                  correctAlternativeIndex: 1
-                },
-                {
-                  question: "(Simulada - Estilo FGV) A legislação federal define uma \"Faixa de Fronteira\" (Lei 6.634/1979) de 150 km de largura, onde há restrições à aquisição de terras por estrangeiros e à realização de certas atividades sem autorização do Conselho de Defesa Nacional. Em Rondônia, essa faixa abrange:",
-                  shortQuestion: "O que a 'Faixa de Fronteira' federal abrange em Rondônia?",
-                  answer: "Toda a fronteira com a Bolívia, incluindo municípios como Guajará-Mirim, Costa Marques e Vilhena.",
-                  alternatives: [
-                    "apenas a capital, Porto Velho, por sua importância estratégica.",
-                    "toda a fronteira com a Bolívia, incluindo municípios como Guajará-Mirim, Costa Marques e Vilhena.",
-                    "apenas a fronteira com o Amazonas, para controlar o acesso a Manaus.",
-                    "todo o território do estado, que é considerado integralmente área de segurança nacional.",
-                    "essa legislação não se aplica a Rondônia, apenas ao Sul do país."
-                  ],
-                  correctAlternativeIndex: 1
-                },
-                {
-                  question: "(Simulada - Estilo FGV) Embora economicamente frustrada, a Estrada de Ferro Madeira-Mamoré (EFMM) deixou um profundo legado cultural e social. Sua construção foi o principal fator para a fundação e desenvolvimento inicial de quais cidades?",
-                  shortQuestion: "A construção da EFMM foi fator principal para a fundação de quais cidades?",
-                  answer: "Porto Velho e Guajará-Mirim.",
-                  alternatives: [
-                    "Vilhena e Cacoal.",
-                    "Ariquemes e Ji-Paraná.",
-                    "Porto Velho e Guajará-Mirim.",
-                    "Costa Marques e Pimenta Bueno.",
-                    "Cerejeiras e Colorado do Oeste."
-                  ],
-                  correctAlternativeIndex: 2
-                },
-                {
-                  question: "(Simulada - Estilo FGV) \"A cidade nasceu como um ponto estratégico para a Comissão Rondon, que ali instalou uma das primeiras estações de telegrafia. Seu nome original era 'Urupá', mas foi rebatizada em homenagem ao rio que a corta, que por sua vez homenageia um grupo indígena.\" O texto descreve a origem da cidade de:",
-                  shortQuestion: "Qual cidade de Rondônia nasceu como o posto telegráfico 'Urupá'?",
-                  answer: "Ji-Paraná.",
-                  alternatives: [
-                    "Ji-Paraná.",
-                    "Vilhena.",
-                    "Cacoal.",
-                    "Ariquemes.",
-                    "Guajará-Mirim."
-                  ],
-                  correctAlternativeIndex: 0
-                },
-                {
-                  question: "(Simulada - Estilo FGV) Sobre os ciclos econômicos de Rondônia, assinale V para a afirmativa verdadeira e F para a falsa. () O Ciclo da Borracha (I e II) foi o que mais fixou o homem no campo, criando pequenas propriedades agrícolas. () O Ciclo da Cassiterita atraiu mão de obra (garimpeiros), mas não tinha foco na posse da terra, e sim na extração, sendo altamente predatório. () O Ciclo da Agropecuária (pós-1970) é o principal responsável pela atual estrutura fundiária e pelo desmatamento, baseado na posse da terra. As afirmativas são, respectivamente,",
-                  shortQuestion: "Sobre os ciclos econômicos de RO, qual a sequência V/F para as afirmativas sobre Borracha, Cassiterita e Agropecuária?",
-                  answer: "F-V-V. O item I é falso; a borracha não fixou o homem em pequenas propriedades, era um regime de aviamento em grandes seringais.",
-                  alternatives: [
-                    "V-F-V.",
-                    "F-V-F.",
-                    "V-F-F.",
-                    "F-V-V.",
-                    "F-F-V."
-                  ],
-                  correctAlternativeIndex: 3
-                },
-                {
-                  question: "(Simulada - Estilo FGV) O Tratado de Madri (1750), que consolidou grande parte do território de Rondônia para Portugal, baseou-se no princípio do uti possidetis (\"quem ocupa de fato, possui de direito\"). Esse novo tratado substituiu qual acordo anterior, que se baseava em linhas imaginárias?",
-                  shortQuestion: "O Tratado de Madri (1750) e seu princípio 'uti possidetis' substituíram qual acordo anterior?",
-                  answer: "O Tratado de Tordesilhas.",
-                  alternatives: [
-                    "O Tratado de Tordesilhas.",
-                    "O Tratado de Petrópolis.",
-                    "Os Acordos de Washington.",
-                    "O Tratado de Assunção.",
-                    "O Edito de Milão."
-                  ],
-                  correctAlternativeIndex: 0
                 }
               ]
             }
@@ -767,10 +701,12 @@ export const CATEGORIES = [
               name: 'Prova 01 (40 questões)',
               cards: [
                 {
+                  id: '',
                   question: 'Segundo Galtung e Ruge, qual critério de noticiabilidade envolve a relevância e proximidade cultural de um fato?',
                   answer: 'O critério da "Significação", que afirma que um fato se torna notícia não apenas pela proximidade geográfica, mas também por sua relevância e proximidade cultural.'
                 },
                 {
+                  id: '',
                   question: 'Qual a principal lição do "Caso Escola Base" para a mídia?',
                   answer: 'A principal lição é a necessidade de responsabilidade e verificação rigorosa dos fatos antes da publicação. O caso demonstrou os danos devastadores que a mídia pode causar ao divulgar acusações sem provas, baseadas em boatos. A ética jornalística exige que o direito à informação seja equilibrado com o respeito à dignidade e à presunção de inocência.',
                   alternatives: [
@@ -782,42 +718,52 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 1
                 },
                 {
+                  id: '',
                   question: 'Segundo Adorno e Horkheimer, qual o principal efeito dos produtos da "Indústria Cultural"?',
                   answer: 'A homogeneização da cultura, estimulando a alienação e a passividade nos consumidores.'
                 },
                 {
+                  id: '',
                   question: 'Quais são as cinco categorias de valores-notícia propostas por Mauro Wolf?',
                   answer: '1. Substantivas (relevância do fato), 2. Relativas ao produto (formato), 3. Relativas ao meio de informação (acessibilidade), 4. Relativas ao público (interesse), 5. Relativas à concorrência (exclusividade).'
                 },
                 {
+                  id: '',
                   question: 'Quais são os quatro pontos de atenção ao usar IA para criar conteúdo, segundo o EducaMídia?',
                   answer: '1. Desinformação (IA não garante precisão), 2. Degradação (perda de qualidade ao resumir), 3. Viés (reforço de preconceitos), e 4. Uniformização (textos padronizados sem criatividade).'
                 },
                 {
+                  id: '',
                   question: 'O que significa a redução de "desertos de notícias", segundo o Atlas da Notícia?',
                   answer: 'Significa a queda no número de municípios que não possuem nenhum veículo de jornalismo local para cobrir assuntos de interesse da comunidade.'
                 },
                 {
+                  id: '',
                   question: 'Como a OpenAI chama as informações falsas, mas plausíveis, criadas por seus modelos de IA?',
                   answer: 'São chamadas de "alucinações". A empresa alertou para o risco de uma "tempestade de desinformação" gerada por IA.'
                 },
                 {
+                  id: '',
                   question: 'No Guia da First Draft, como é classificado o uso de humor e exagero para criticar situações reais, mesmo que possa ser mal interpretado?',
                   answer: 'É classificado como "Sátira ou Paródia". O objetivo não é enganar, mas fazer uma crítica, embora haja o risco de ser confundido com um fato real.'
                 },
                 {
+                  id: '',
                   question: 'Qual a punição prevista no Código de Ética para um jornalista que expõe indevidamente a vida privada de uma pessoa?',
                   answer: 'A punição pode ser a suspensão ou exclusão do jornalista do quadro social do sindicato. O registro profissional não pode ser cassado por comissões de ética.'
                 },
                 {
+                  id: '',
                   question: 'Como se chama o fenômeno em que algoritmos nos mostram conteúdos que confirmam nossas crenças, nos isolando de perspectivas diferentes?',
                   answer: 'Bolha informacional ou câmara de eco (echo chamber).'
                 },
                 {
+                  id: '',
                   question: 'O que popularizou o termo "interatividade" na mídia de massa no Brasil em 2002 e qual tipo de "leitura" a internet inaugurou?',
                   answer: 'Os "reality shows" popularizaram o termo. A internet inaugurou a navegação por "hipertexto", rompendo com a leitura linear de jornais e revistas.'
                 },
                 {
+                  id: '',
                   question: 'Qual NÃO é uma característica de uma boa pauta jornalística?',
                   answer: 'Uma boa pauta serve como um guia inicial, mas deve oferecer flexibilidade para que o repórter explore novos ângulos durante a apuração. Limitar ou engessar o trabalho, ditando conclusões, vai contra o princípio da investigação jornalística e pode comprometer a imparcialidade da matéria.',
                   alternatives: [
@@ -829,114 +775,142 @@ export const CATEGORIES = [
                   correctAlternativeIndex: 3
                 },
                 {
+                  id: '',
                   question: 'Qual locutor esportivo brasileiro ficou conhecido como "speaker metralhadora" por sua narração rápida e pioneira no rádio?',
                   answer: 'Nicolau Tuma.'
                 },
                 {
+                  id: '',
                   question: 'Qual jornalista NÃO participou da emblemática reforma gráfica do Jornal do Brasil nos anos 1950?',
                   answer: 'Vladimir Herzog. Nomes como Ferreira Gullar, Amilcar de Castro e Reynaldo Jardim participaram do projeto.'
                 },
                 {
+                  id: '',
                   question: 'Quais as diferenças conceituais entre notícia e reportagem?',
                   answer: 'Reportagem tem mais profundidade e autonomia do jornalista. A notícia preza pelo imediatismo. Uma notícia pode gerar uma reportagem, mas nem toda reportagem parte de uma notícia.'
                 },
                 {
+                  id: '',
                   question: 'Qual característica NÃO é esperada de um texto noticioso?',
                   answer: 'Verborragia (prolixidade). O texto deve ser claro, preciso, conciso e objetivo.'
                 },
                 {
+                  id: '',
                   question: 'Qual foi um princípio fundamental na atuação de Ivy Lee, pioneiro das Relações Públicas?',
                   answer: 'Estabelecer um compromisso com a confiabilidade, fornecendo notícias e respostas honestas aos jornalistas, em oposição à propaganda enganosa.'
                 },
                 {
+                  id: '',
                   question: 'Qual a base para a construção da identidade de uma empresa?',
                   answer: 'Sua missão, visão e valores. A realidade interna da empresa é o ponto de partida para a percepção de sua imagem institucional.'
                 },
                 {
+                  id: '',
                   question: 'Segundo Philip Kotler, quais eram os focos do Marketing 1.0, 2.0 e 3.0, respectively?',
                   answer: '1.0: Produto; 2.0: Consumidor; 3.0: Ser humano (valores).'
                 },
                 {
+                  id: '',
                   question: 'Na organização de eventos, em quais fases ocorrem a "prestação de contas" e a "identificação de objetivos"?',
                   answer: 'A prestação de contas ocorre no "pós-evento" e a identificação dos objetivos ocorre na "concepção".'
                 },
                 {
+                  id: '',
                   question: 'De acordo com a teoria da Espiral do Silêncio, o que as pessoas tendem a fazer para evitar o isolamento social?',
                   answer: 'Elas tendem a expressar publicamente suas opiniões quando percebem que são compartilhadas pela maioria, e a silenciar quando se sentem em minoria.'
                 },
                 {
+                  id: '',
                   question: 'Qual a estratégia de comunicação mais eficaz para o lançamento de um produto inovador e de alto custo?',
                   answer: 'Desenvolver uma narrativa forte e convincente, personalizar as mensagens para diferentes meios e construir um relacionamento de credibilidade com jornalistas-chave da área.'
                 },
                 {
+                  id: '',
                   question: 'Qual orientação NÃO se deve dar a um assessorado para uma entrevista de TV?',
                   answer: 'Usar roupas coloridas e acessórios chamativos ou uma linguagem muito rebuscada e técnica. A comunicação deve ser clara, e a informação, o foco.'
                 },
                 {
+                  id: '',
                   question: 'Como é chamado o processo de preparação de uma fonte (porta-voz) para interagir com a imprensa?',
                   answer: 'Media Training.'
                 },
                 {
+                  id: '',
                   question: 'Como as novas tecnologias impactaram o "press release"?',
                   answer: 'Ele perdeu a exclusividade de formato tradicional, passando a ser um conteúdo direto para diversas plataformas, enriquecido com elementos multimídia (vídeos, links, infográficos).'
                 },
                 {
+                  id: '',
                   question: 'Em qual fase do planejamento estratégico de comunicação se faz o levantamento de missão, visão e valores da organização?',
                   answer: 'Na Fase I: Pesquisa, mapeamento e diagnóstico.'
                 },
                 {
+                  id: '',
                   question: 'Correlacione os formatos aos gêneros de Marques de Melo: Indicadores econômicos, Dossiê, Crônica.',
                   answer: 'Indicadores econômicos: Gênero Utilitário. Dossiê: Gênero Interpretativo. Crônica: Gênero Opinativo.'
                 },
                 {
+                  id: '',
                   question: 'Um texto que expressa a opinião institucional de um veículo de comunicação sobre um fato é classificado como qual gênero jornalístico?',
                   answer: 'Editorial.'
                 },
                 {
+                  id: '',
                   question: 'Segundo Nilson Lage, como se chama o tipo de lead que apresenta fatos em sequência até um clímax, como um pequeno conto?',
                   answer: 'Lead narrativo.'
                 },
                 {
+                  id: '',
                   question: 'Como se diferenciam os modelos de pirâmide invertida e pirâmide deitada?',
                   answer: 'Na pirâmide invertida, a importância da informação decresce ao longo do texto, o que não ocorre no modelo da pirâmide deitada.'
                 },
                 {
+                  id: '',
                   question: 'Qual fato marca o início do Jornal Nacional na TV brasileira?',
                   answer: 'Sua estreia em 1969 na TV Globo, quatro anos após a fundação da emissora, sendo idealizado por Armando Nogueira.'
                 },
                 {
+                  id: '',
                   question: 'Qual foi o primeiro canal de notícias 24 horas (all news) da TV brasileira, lançado nos anos 90?',
                   answer: 'GloboNews.'
                 },
                 {
+                  id: '',
                   question: 'Qual programa é um exemplo longevo do gênero "revista eletrônica" na TV brasileira?',
                   answer: 'O Fantástico. Programas como Silvio Santos e Domingão do Faustão são do gênero "variedades".'
                 },
                 {
+                  id: '',
                   question: 'Como deve ser o texto que acompanha as imagens em um telejornal?',
                   answer: 'Deve ser claro e conciso, com frases curtas e linguagem simples, para complementar e não apenas descrever o que já está sendo visto.'
                 },
                 {
+                  id: '',
                   question: 'Quais são os vértices do modelo de produção noticiosa "News Diamond"?',
                   answer: 'Interatividade, ineditismo e crossmídia.'
                 },
                 {
+                  id: '',
                   question: 'Qual é a característica da quarta geração do jornalismo na web?',
                   answer: 'O surgimento de novas narrativas baseadas no uso intenso de recursos de interatividade, multimidialidade e personalização.'
                 },
                 {
+                  id: '',
                   question: 'Qual jornalista dá nome ao principal prêmio de Jornalismo de Dados no Brasil?',
                   answer: 'Cláudio Weber Abramo.'
                 },
                 {
+                  id: '',
                   question: 'O que é o Jornalismo de Precisão, proposto por Philip Meyer?',
                   answer: 'É a defesa do uso de métodos científicos (análise de dados) na apuração jornalística, em oposição às técnicas puramente literárias do "New Journalism".'
                 },
                 {
+                  id: '',
                   question: 'No Jornalismo de Soluções, qual é a abordagem correta?',
                   answer: 'É uma prática criteriosa focada na resposta a um problema social, explicando como funciona, suas evidências de eficácia e suas limitações, sem ser mera propaganda ou história de "heróis".'
                 },
                 {
+                  id: '',
                   question: 'Pela metodologia do Comprova, como é classificado um conteúdo real (foto, vídeo) usado fora de seu contexto original para enganar?',
                   answer: 'Enganoso. O conteúdo é autêntico, mas a forma como é apresentado (com legenda, data ou local falsos) induz a uma interpretação errada.'
                 }
@@ -947,122 +921,152 @@ export const CATEGORIES = [
               name: 'Prova 02 (30 questões)',
               cards: [
                 {
+                  id: '',
                   question: 'Segundo Mauro Wolf, em que categoria de valor-notícia se enquadra a exclusividade de uma informação (furo de reportagem)?',
                   answer: 'Na categoria "Relativas à concorrência", pois se refere à capacidade de um meio de comunicação de antecipar a divulgação de uma informação.'
                 },
                 {
+                  id: '',
                   question: 'Nos primórdios da TV brasileira, como eram chamadas as câmeras que gravavam imagens externas sem som?',
                   answer: "Eram câmeras 'a corda'. A narração dos fatos era feita ao vivo no estúdio, num formato conhecido como 'rádio ilustrado'."
                 },
                 {
+                  id: '',
                   question: 'No modelo de Comunicação Integrada de Margarida Kunsch, o que o Marketing Direto compõe?',
                   answer: 'O Marketing Direto é uma das áreas ou ações que compõem a comunicação mercadológica.'
                 },
                 {
+                  id: '',
                   question: 'Quais revistas no Brasil são exemplos históricos de "magazines" que, assim como as internacionais Life e Look, usavam a fotografia como principal atrativo?',
                   answer: 'Manchete e O Cruzeiro.'
                 },
                 {
+                  id: '',
                   question: 'Qual a principal diferença entre a pauta de uma notícia e a de uma reportagem, segundo Nilson Lage?',
                   answer: 'Pautas de reportagens são mais completas, sugerindo tratamento editorial, custos e prazos, enquanto as de notícias são mais focadas no imediatismo.'
                 },
                 {
+                  id: '',
                   question: 'Segundo Nilson Lage, uma entrevista é classificada por objetivo ou por circunstância. A "entrevista em profundidade" é classificada por qual critério?',
                   answer: 'É classificada por seu OBJETIVO. Entrevistas coletivas ou ocasionais são classificadas pela CIRCUNSTÂNCIA.'
                 },
                 {
+                  id: '',
                   question: 'Qual orientação o Manual de Redação da Folha de S. Paulo dá para a criação de títulos noticiosos?',
                   answer: 'Evitar o uso de siglas pouco conhecidas e/ou mais de uma sigla no mesmo título, além de preferir a ordem direta e uma linguagem clara.'
                 },
                 {
+                  id: '',
                   question: 'De acordo com a pesquisa da Aberje (2023), qual o canal de comunicação mais utilizado pelas empresas para se comunicar com o público EXTERNO?',
                   answer: 'As redes sociais, utilizadas por 87% das empresas participantes.'
                 },
                 {
+                  id: '',
                   question: "No seu famoso ensaio, o que Walter Benjamin analisa sobre a 'reprodutibilidade técnica' da arte?",
                   answer: 'Ele discute os impactos de tecnologias como a fotografia e o cinema sobre a "aura" (autenticidade e unicidade) das obras de arte.'
                 },
                 {
+                  id: '',
                   question: 'Como Margarida Kunsch define a comunicação interna no seu modelo de Comunicação Integrada?',
                   answer: 'Como uma ferramenta estratégica para compatibilizar os interesses dos empregados e da empresa, estimulando o diálogo e a participação.'
                 },
                 {
+                  id: '',
                   question: 'No jargão do telejornalismo, como é chamada a notícia lida pelo apresentador sem a cobertura de imagens?',
                   answer: 'Nota Pelada.'
                 },
                 {
+                  id: '',
                   question: "Qual elemento NÃO faz parte do modelo 'News Diamond' de Paul Bradshaw, que descreve as etapas de uma grande notícia?",
                   answer: 'Checagem (Checking). O modelo inclui etapas como Alerta, Contexto, Interatividade e Customização, mas a checagem é um pressuposto geral, não uma etapa do diamante.'
                 },
                 {
+                  id: '',
                   question: 'Além de se relacionar com jornalistas, qual novo papel o assessor de imprensa assumiu com o advento das mídias digitais?',
                   answer: 'Passou a informar diretamente um público final mais amplo, sem a intermediação exclusiva da imprensa tradicional.'
                 },
                 {
+                  id: '',
                   question: 'Qual das seguintes ações NÃO é considerada um atributo essencial de um bom assessor de imprensa?',
                   answer: 'Distribuir brindes. As qualidades essenciais são ter acesso à direção, conhecer a empresa, conhecer a mídia e ser um mediador qualificado.'
                 },
                 {
+                  id: '',
                   question: 'Quando é mais apropriado organizar uma entrevista coletiva?',
                   answer: 'Quando há necessidade de passar informações relevantes e de interesse público imediato para jornalistas de vários veículos ao mesmo tempo.'
                 },
                 {
+                  id: '',
                   question: 'Como se chama a atividade de monitorar sistematicamente os veículos de comunicação para identificar e organizar citações sobre uma determinada organização ou tema?',
                   answer: 'Clipping.'
                 },
                 {
+                  id: '',
                   question: "Na comunicação interna, qual 'atitude' (segundo House) corresponde a ouvir reclamações sem resistência e dar espaço para as opiniões dos funcionários?",
                   answer: 'Atitude receptiva.'
                 },
                 {
+                  id: '',
                   question: 'Na "Classificação Marques de Melo", a quais gêneros jornalísticos pertencem, respectively, os formatos: Perfil, Caricatura e Nota?',
                   answer: 'Gênero Interpretativo, Gênero Opinativo e Gênero Informativo.'
                 },
                 {
+                  id: '',
                   question: 'Um texto opinativo, assinado por um especialista ou personalidade, que não representa necessariamente a opinião do veículo, é um exemplo de qual gênero?',
                   answer: 'Artigo.'
                 },
                 {
+                  id: '',
                   question: "Como o IJNet descreve o papel das ferramentas de IA para jornalistas?",
                   answer: "Como um recurso 'inestimável', mas que exige supervisão humana para evitar a publicação de dados imprecissos e garantir a credibilidade."
                 },
                 {
+                  id: '',
                   question: "Segundo Nilson Lage, como é chamado o lead que organiza os elementos da notícia (quem, o que, etc.) a partir do mais importante e com uma estrutura frasal direta?",
                   answer: 'Lead clássico.'
                 },
                 {
+                  id: '',
                   question: 'Qual dos seguintes NÃO é um valor-notícia contextual (de produção) segundo Nelson Traquina?',
                   answer: "Dramatização. Este é um valor-notícia de conteúdo. Critérios contextuais se referem à produção, como Disponibilidade, Visualidade e Concorrência."
                 },
                 {
+                  id: '',
                   question: 'Qual preceito do Código de Ética do Jornalista foi violado na cobertura da morte da cantora Marília Mendonça, ao exibir imagens de seu corpo?',
                   answer: 'O preceito de não divulgar imagens de caráter mórbido ou sensacionalista em cobertura de crimes e acidentes.'
                 },
                 {
+                  id: '',
                   question: 'Se uma pesquisa revela que os cidadãos querem mais transparência e participação de uma organização pública, qual a estratégia de comunicação adequada?',
                   answer: 'Implementar uma comunicação bidirecional, com informações claras e canais que incentivem a participação dos cidadãos.'
                 },
                 {
+                  id: '',
                   question: 'De acordo com a pesquisa de tendências da Aberje (2023), qual é um dos principais desafios atuais da Comunicação Interna?',
                   answer: 'Comunicar eficientemente a estratégia e a cultura da empresa aos colaboradores.'
                 },
                 {
+                  id: '',
                   question: 'Segundo a Constituição do Estado do Tocantins, qual matéria deve ser regulada por lei complementar?',
                   answer: 'Os casos de contratação por tempo determinado para atender a necessidade temporária de excepcional interesse público.'
                 },
                 {
+                  id: '',
                   question: 'Pelo Regimento Interno da Assembleia Legislativa do Tocantins (Aleto), para que servem os projetos de resolução?',
                   answer: 'Servem para regular, com eficácia de lei ordinária, matéria de competência privativa da própria Assembleia Legislativa.'
                 },
                 {
+                  id: '',
                   question: 'No Estatuto dos Servidores de Tocantins, qual sanção pode ser aplicada a um servidor que revela um segredo do cargo?',
                   answer: 'A sanção varia conforme a gravidade, podendo ir de advertência a demissão, após processo administrativo disciplinar.'
                 },
                 {
+                  id: '',
                   question: 'Qual é um requisito para a progressão na carreira dos servidores da Aleto, segundo a Lei nº 4.208/2023?',
                   answer: 'Obter conceito igual ou superior a 70% dos pontos possíveis nos procedimentos de avaliação de desempenho.'
                 },
                 {
+                  id: '',
                   question: 'Qual é uma das competências do Controlador Interno da Assembleia Legislativa do Tocantins?',
                   answer: 'Planejar, coordenar e dirigir as atividades administrativas, orçamentárias, financeiras, de comunicação social, de T.I. e de apoio legislativo da Casa.'
                 }
@@ -1073,134 +1077,167 @@ export const CATEGORIES = [
               name: 'Prova 03 (33 questões)',
               cards: [
                 {
+                  id: '',
                   question: 'No telejornalismo, um redator que escreve editoriais e crônicas se enquadra em qual função, segundo o Decreto-Lei nº 83.284/79, e qual o nome da estrutura narrativa que ele produz para expressar a opinião do veículo?',
                   answer: 'Função de Redator; a estrutura é o Editorial.'
                 },
                 {
+                  id: '',
                   question: 'Considerando a premissa da fragmentação informativa, onde a notícia é uma versão do real, qual é a natureza da notícia final apresentada ao público?',
                   answer: 'É um produto de estratégias de seleção e adaptação de ordem editorial.'
                 },
                 {
+                  id: '',
                   question: 'Na comédia "Um lugar chamado Notting Hill", a personagem de Julia Roberts concede uma série de entrevistas curtas e individuais. Como essa modalidade de entrevista é conhecida no jornalismo?',
                   answer: 'Entrevista exclusiva.'
                 },
                 {
+                  id: '',
                   question: 'Qual é a estrutura correta de uma matéria jornalística que segue o formato de pirâmide invertida, incluindo lead, sublead e duas sonoras com seus respectivos entretítulos?',
                   answer: 'L1 (lead) + L2 (sublead) + E1 (entretítulo 1) + D1 (documentação 1) + E2 (entretítulo 2) + D2 (documentação 2).'
                 },
                 {
+                  id: '',
                   question: 'Para automatizar a transcrição de uma entrevista de 30 minutos disponível no YouTube, qual procedimento emergente e eficiente um jornalista pode utilizar?',
                   answer: 'Utilizar uma extensão de navegador com ChatGPT para transcrição e resumo.'
                 },
                 {
+                  id: '',
                   question: 'Ao analisar um jornal, um estudante encontra: uma seção com notas variadas, dois textos opinativos longos com pé biográfico, e um texto de uma linha abaixo dos títulos. O que ele identificou, respectivamente?',
                   answer: 'Coluna informativa, artigos e subtítulo.'
                 },
                 {
+                  id: '',
                   question: 'Analisando os títulos: "Férias, décimo terceiro e bônus: um terço dos brasileiros não sabe administrar o dinheiro..." e "Estudo inédito revela que 73,5% das famílias paulistanas têm dívidas". Ambos estão corretos quanto ao emprego dos numerais?',
                   answer: 'Sim, ambos estão corretos (títulos III e IV da questão original).'
                 },
                 {
+                  id: '',
                   question: 'Na primeira página de uma publicação institucional, qual recurso é usado para coordenar e destacar várias matérias sobre um mesmo tema, geralmente com 10 a 15 linhas?',
                   answer: 'lidao'
                 },
                 {
+                  id: '',
                   question: 'Para organizar dados para um espelho de programação, qual a ordem crescente de detalhamento entre os indexadores: editoria, lead flash, retranca e tags?',
                   answer: 'Retranca, lead flash, editoria, tags.'
                 },
                 {
+                  id: '',
                   question: 'Qual título de reportagem para um telejornal de Mato Grosso do Sul melhor conjuga os critérios de "proximidade geográfica", "atualidade" e "consequências"?',
                   answer: '"Santa Casa de Campo Grande fica sem energia elétrica neste sábado".'
                 },
                 {
+                  id: '',
                   question: 'Em textos radiofônicos factuais com características de "serviço", qual recomendação de redação é comum para aumentar a apreensão da informação pelo ouvinte?',
                   answer: 'Reapresentar, de forma resumida, a informação principal no final da matéria.'
                 },
                 {
+                  id: '',
                   question: 'Como a Lei Geral de Proteção de Dados (LGPD) se relaciona com a atividade jornalística?',
                   answer: 'A LGPD prevê exceções para atividades com fins exclusivamente jornalísticos, salvaguardando o interesse público.'
                 },
                 {
+                  id: '',
                   question: 'Em um cartaz de campanha com diagramação vertical, qual a ordem decrescente de percepção visual das quatro áreas da página (1=sup. esquerdo, 2=sup. direito, 3=inf. esquerdo, 4=inf. direito)?',
                   answer: '1, 2, 3, 4.'
                 },
                 {
+                  id: '',
                   question: 'Em uma estrutura de webjornalismo piramidal de seis camadas, qual mecanismo a sexta camada (reações dos leitores) implementa na relação emissor-receptor?',
                   answer: 'Feedback.'
                 },
                 {
+                  id: '',
                   question: 'Para uma transmissão ao vivo com três convidados sentados, visando captar suas vozes de forma clara e individual, qual a configuração de microfones ideal?',
                   answer: 'Três unidades de microfone unidirecional de lapela, um para cada convidado.'
                 },
                 {
+                  id: '',
                   question: 'Diante de uma crise institucional, qual a ação mais adequada e equânime que um assessor de imprensa de uma autarquia federal deve tomar?',
                   answer: 'Convocar uma coletiva de imprensa, distribuindo releases de forma ampla para todos os veículos.'
                 },
                 {
+                  id: '',
                   question: 'Qual é a ação primordial para conseguir e manter seguidores em um perfil comercial no Instagram?',
                   answer: 'Monitorar e analisar os resultados para ajustar a estratégia.'
                 },
                 {
+                  id: '',
                   question: 'Para uma empresa que adota a teoria das "Relações Humanas" e quer valorizar seus funcionários, qual veículo de comunicação interna é mais apropriado?',
                   answer: 'Jornal mural.'
                 },
                 {
+                  id: '',
                   question: 'Com o advento da internet, como mudou a dinâmica do "pitching" (follow-up) de releases?',
                   answer: 'O processo tornou-se mais ativo, com jornalistas buscando informações específicas, em vez de apenas receberem passivamente os releases.'
                 },
                 {
+                  id: '',
                   question: 'Qual é uma característica fundamental de uma nota oficial emitida por uma instituição pública para se posicionar sobre um tema que repercutiu na imprensa?',
                   answer: 'A inclusão da assinatura da fonte, quando publicada nos canais oficiais da instituição.'
                 },
                 {
+                  id: '',
                   question: 'Qual ferramenta nativa do Windows 10 (ou superior) é usada para recortar e salvar partes da tela, sendo essencial para a produção de clipping eletrônico?',
                   answer: 'Ferramenta de Captura de Tela.'
                 },
                 {
+                  id: '',
                   question: 'Ao dar uma entrevista para uma rádio popular, o que um porta-voz deve priorizar para se conectar com o público-alvo e gerar retorno positivo?',
                   answer: 'Usar uma vestimenta que promova empatia com o público-alvo, considerando o formato da entrevista (se houver vídeo).'
                 },
                 {
+                  id: '',
                   question: 'Qual requisito básico um profissional deve ter para ser um bom porta-voz em uma coletiva de imprensa?',
                   answer: 'Capacidade de argumentação e firmeza para abordar perguntas, mesmo que sejam inesperadas ou fora do contexto inicial.'
                 },
                 {
+                  id: '',
                   question: 'Na escolha de ferramentas de marketing como marketing direto, folhetos e marketing viral, quais critérios estratégicos devem ser observados?',
                   answer: 'O perfil do público-alvo e a mensagem principal da campanha.'
                 },
                 {
+                  id: '',
                   question: 'No contexto do marketing de retenção, qual conceito descreve a evolução do foco no valor vitalício do cliente para a gestão de um relacionamento duradouro e fiel?',
                   answer: 'A evolução do lifetime value para o Customer Relationship Management (CRM).'
                 },
                 {
+                  id: '',
                   question: 'Quais são as especificidades de comunicação do rádio e do outdoor, respectivamente?',
                   answer: 'Rádio: reforço da palavra com música/sonoplastia. Outdoor: mensagens curtas e uso de imagens.'
                 },
                 {
+                  id: '',
                   question: 'Em pesquisa de mercado, como é chamado o indicador que mede a eficiência da comunicação e a lembrança de uma marca na mente do consumidor?',
                   answer: 'Top of mind.'
                 },
                 {
+                  id: '',
                   question: 'Por que a promoção pessoal de um servidor em publicidade institucional fere os princípios da Administração Pública?',
                   answer: 'Porque a funcionalidade da publicidade institucional veda sua realização quando há o objetivo de promoção pessoal de agentes públicos.'
                 },
                 {
+                  id: '',
                   question: 'Qual é a principal crítica à estratégia de veicular comunicação pública exclusivamente em redes sociais, considerando o contexto de mercados emergentes?',
                   answer: 'A necessidade prévia de uma política pública que garanta acesso universal e de qualidade à internet e a dispositivos (inclusão digital).'
                 },
                 {
+                  id: '',
                   question: 'Qual alternativa indica, respectivamente, um canal de comunicação para o público interno e um para o público externo?',
                   answer: 'Intranet (interno) e site de relações com investidores (externo).'
                 },
                 {
+                  id: '',
                   question: 'Se uma empresa listada no Índice de Sustentabilidade Empresarial (ISEB3) é comprovadamente culpada por prática ambiental nociva, qual dano ela sofre além da remoção do índice?',
                   answer: 'Dano à reputação corporativa e à imagem pública.'
                 },
                 {
+                  id: '',
                   question: 'Em uma gestão de crise, por que as equipes de Gerência de Crise e Comunicação devem atuar de forma integrada?',
                   answer: 'Porque conduzir o gerenciamento com eficiência e transparência significa dar autonomia à Comunicação para administrar e debelar a crise.'
                 },
                 {
+                  id: '',
                   question: 'O Capítulo V da Constituição Federal dispõe sobre a Comunicação Social e, no que diz respeito às concessões para o funcionamento de empresas de radiodifusão, estabelece que',
                   shortQuestion: "(FGV/Câmara de Fortaleza-CE) Sobre as concessões de radiodifusão na Constituição Federal.",
                   answer: 'O cancelamento da concessão ou permissão, antes de vencido o prazo, depende de decisão judicial. (Art. 223, § 4º, da Constituição Federal)',
@@ -1211,6 +1248,853 @@ export const CATEGORIES = [
                     'o cancelamento da concessão ou permissão, antes de vencido o prazo, depende de decisão judicial.',
                     'compete ao Poder Legislativo outorgar e renovar concessão, permissão e autorização para o serviço de radiodifusão sonora e de sons e imagens, com prioridade para empresas estatais.'
                   ],
+                  correctAlternativeIndex: 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: 'legislacao-especifica',
+          name: 'Legislação Específica (ALE-RO)',
+          decks: [
+            {
+              id: 'aula-01-apostila',
+              name: 'Aula 01 - Apostila (28 questões)',
+              cards: [
+                {
+                  id: '',
+                  question: '(CS-UFG-2024-IF/SE-ADAPTADA) A investidura do servidor em cargo de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental verificada em inspeção médica refere-se à',
+                  shortQuestion: 'Investidura de servidor com limitação física/mental em cargo compatível é?',
+                  answer: 'Readaptação é a investidura do servidor em cargo de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental verificada em inspeção médica.',
+                  alternatives: [ 'readaptação.', 'reversão.', 'reintegração.', 'recondução.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(QCX-2024-ADAPTADA) Rezende já era servidor estável, foi aprovado em concurso para outro cargo no mesmo órgão, mas foi inabilitado no estágio probatório e retornou ao cargo anteriormente ocupado. Nos termos da Lei nº 68/1992 (Regime Jurídico dos Servidores do Estado de Rondônia), Rezende passou pelo processo de:',
+                  shortQuestion: 'Servidor estável inabilitado em estágio probatório que retorna ao cargo anterior. Qual o processo?',
+                  answer: 'Recondução é o retorno do servidor estável ao cargo anteriormente ocupado e decorrerá de inabilitação em estágio probatório relativo a outro cargo ou reintegração do anterior ocupante.',
+                  alternatives: [ 'revisão.', 'reinclusão.', 'recondução.', 'reintegração.', 'repristinação.' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(FUNDATEC - 2024 - UFCSPA/RS) Sobre o Regime Jurídico dos Servidores Públicos, analise as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. () Um dos requisitos para investidura em cargo público é a nacionalidade brasileira. () Uma das formas de provimento de cargo público é a nomeação. () O servidor habilitado em concurso público adquirirá a estabilidade após completar 05 anos de efetivo exercício. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:',
+                  shortQuestion: 'Sobre o Regime Jurídico (nacionalidade, nomeação, estabilidade), qual a sequência V/F correta?',
+                  answer: 'A nacionalidade brasileira é um requisito (V). A nomeação é uma forma de provimento (V). A estabilidade é adquirida após 3 anos de exercício efetivo, não 5 (F). Portanto, a sequência correta é V - V - F.',
+                  alternatives: [ 'V - V - F.', 'V - F - V.', 'F - V - V.', 'D) F - F - V.', 'E) F - F - F.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO CONSULPLAN-2024- CÂMARA DE BELO HORIZONTE/MG) Sobre os requisitos para se tornar um servidor público, assinale a afirmativa correta.',
+                  shortQuestion: 'Qual é o requisito correto para se tornar um servidor público?',
+                  answer: 'Brasileiros naturalizados e estrangeiros (na forma da lei) podem ser servidores públicos, desde que o cargo não seja privativo de brasileiro nato.',
+                  alternatives: [
+                    'Por regra aquele que não tiver a quitação eleitoral pode ser nomeado servidor público.',
+                    'Brasileiro nato, emancipado, com dezesseis anos completos pode, por regra, ser servidor público.',
+                    'Aquele que esteja com seus direitos políticos suspensos, nos termos da lei, poderá ser nomeado servidor público, durante o período de suspensão.',
+                    'Nos termos da lei, estrangeiros podem ser servidores públicos. Por exemplo, estrangeiros cujos países tenham tratado de reciprocidade com o Brasil para que brasileiros também possam ser servidores naquele país.'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(SELECON-2024-PREFEITURA DE SAPEZAL/MT) Em relação ao prazo de validade dos concursos públicos, a Constituição Federal institui que terão um prazo máximo, considerando sua prorrogação, de até:',
+                  shortQuestion: 'Qual o prazo máximo de validade de um concurso público, incluindo prorrogação?',
+                  answer: 'Concursos públicos são válidos por até 2 anos, prorrogáveis uma vez por igual período. Ou seja, o prazo máximo, considerando a prorrogação, é de 4 anos.',
+                  alternatives: [ 'dois anos', 'três anos', 'quatro anos', 'cinco anos' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(SELECON-2024-PREFEITURA DE SAPEZAL/MT) Determinado servidor estável conseguiu o direito à reintegração no serviço público. Supondo que outro servidor com estabilidade tivesse sido posto em seu lugar, este:',
+                  shortQuestion: 'Na reintegração, o que acontece com o servidor que ocupava a vaga do reintegrado?',
+                  answer: 'Na reintegração, o eventual ocupante da vaga é reconduzido ao cargo de origem, aproveitado em outro cargo ou, se não for possível, posto em disponibilidade com remuneração proporcional ao tempo de serviço.',
+                  alternatives: [
+                    'poderá ser posto em disponibilidade, com remuneração proporcional ao seu tempo de serviço público',
+                    'poderá ser posto em disponibilidade, com remuneração proporcional ao seu tempo de contribuição',
+                    'será aproveitado em cargo de qualquer natureza, percebendo a remuneração compatível à anterior',
+                    'será reconduzido ao seu cargo de origem, com direito à indenização'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(CESGRANRIO-2024-CNU-ADAPTADA) De acordo com o Regime Jurídico dos Servidores do Estado de Rondônia, são requisitos básicos para investidura em cargo público:',
+                  shortQuestion: 'Qual dos itens é um requisito básico para investidura em cargo público em Rondônia?',
+                  answer: 'A quitação com as obrigações militares e eleitorais é um requisito básico. A nacionalidade pode ser brasileira (nata ou naturalizada), a idade mínima é 18 anos, e o gozo dos direitos políticos é exigido.',
+                  alternatives: [
+                    'Ser brasileiro nato;',
+                    'o gozo dos direitos civis;',
+                    'a idade mínima de 16 anos;',
+                    'o nível de escolaridade superior;',
+                    'a quitação com as obrigações eleitorais.'
+                  ],
+                  correctAlternativeIndex: 4
+                },
+                {
+                  id: '',
+                  question: '(FGV-2024-SES/MT) O ato administrativo, emanado de autoridade competente, que visa ao preenchimento de determinado cargo público, é denominado provimento. À luz do Regime Jurídico dos Servidores do Estado de Rondônia, assinale a opção que apresenta um tipo de provimento com a sua correta definição.',
+                  shortQuestion: 'Qual a definição correta de Readaptação?',
+                  answer: 'Readaptação é a investidura do servidor em cargos de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental verificada em inspeção médica.',
+                  alternatives: [
+                    'A readaptação é a investidura de servidor em cargo de atribuições compatíveis com a limitação sofrida em sua capacidade física ou mental, verificada em inspeção médica.',
+                    'A reversão é o aproveitamento do servidor em cargo anteriormente ocupado, quando invalidada a sua demissão por decisão administrativa ou judicial, fazendo jus ao ressarcimento.',
+                    'A reintegração é o regresso do servidor ao cargo anteriormente ocupado, decorrente de inabilitação em estágio probatório relativo a outro cargo.',
+                    'A recondução é o retorno à atividade de servidor aposentado por invalidez, quando a junta médica declarar insubsistentes os motivos da aposentadoria.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(SELECON-2024-SAD/MS) O retorno à atividade de um funcionário aposentado por invalidez, quando, por junta médica oficial, forem declarados insubsistentes os motivos determinantes da aposentadoria, chama-se:',
+                  shortQuestion: 'Como se chama o retorno do servidor aposentado por invalidez?',
+                  answer: 'Reversão é o retorno à atividade do servidor aposentado por invalidez quando os motivos da aposentadoria desaparecem, comprovado por junta médica oficial.',
+                  alternatives: [ 'Retorno', 'Invalidez', 'Inaptidão', 'Reversão', 'readaptação' ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(OBJETIVA-2024-PREFEITURA DE CASTRO/PR) O. é servidor público estadual há mais de 10 anos. Ao retornar de férias com sua família, sofreu um grave acidente, o que ocasionou sua aposentadoria por invalidez. Alguns meses depois, após várias sessões de fisioterapia, os motivos que ocasionaram sua inatividade desapareceram. Nesse caso, O. será:',
+                  shortQuestion: 'Servidor aposentado por invalidez que se recupera será...?',
+                  answer: 'Reversão é o retorno do servidor aposentado por invalidez quando os motivos causadores da inatividade desaparecem. Portanto, O. será revertido.',
+                  alternatives: [ 'Aproveitado.', 'Revertido.', 'Promovido.', 'Exonerado.', 'Reconduzido.' ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FGV-2024-DNIT-ADAPTADA) Para os efeitos do Regime Jurídico dos Servidores do Estado de Rondônia, assinale a que apresenta o conceito correto de servidor público.',
+                  shortQuestion: 'Qual o conceito correto de servidor público?',
+                  answer: 'Servidor é a pessoa legalmente investida em cargo público.',
+                  alternatives: [
+                    'Pessoa legalmente investida em função pública.',
+                    'Pessoa cuja relação de trabalho assemelha-se ao setor sem fins lucrativos.',
+                    'Pessoa legalmente investida em cargo público.',
+                    'Pessoa cuja relação de trabalho assemelha-se ao setor privado.',
+                    'Pessoa legalmente investida em emprego público.'
+                  ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(FGV-2024-DNIT-ADAPTADA) Entre os requisitos básicos para investidura em cargo público, encontra-se pertinente',
+                  shortQuestion: 'Qual destes é um requisito básico para investidura em cargo público?',
+                  answer: 'A nacionalidade brasileira é um dos requisitos básicos para investidura em cargo público. Os outros são idade mínima de 18 anos, quitação com obrigações sociais (eleitorais e militares) e aptidão física e mental.',
+                  alternatives: [
+                    'a nacionalidade brasileira.',
+                    'o nível de escolaridade de pós-graduação.',
+                    'a idade mínima de dezesseis anos.',
+                    'a quitação com as obrigações sociais.',
+                    'a inaptidão física e mental.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(IV-UFG-2024) Dentro do regime jurídico dos servidores públicos, a assinatura do respectivo termo, no qual deverão constar as atribuições, os deveres, as responsabilidades e os direitos inerentes ao cargo ocupado é denominada de',
+                  shortQuestion: 'Como se denomina a assinatura do termo de aceitação das atribuições do cargo?',
+                  answer: 'A posse dar-se-á pela assinatura do respectivo termo, no qual deverão constar as atribuições, os deveres, as responsabilidades e os direitos inerentes ao cargo ocupado.',
+                  alternatives: [ 'posse.', 'provimento.', 'investidura.', 'exercício.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(SELECON-2024-SAD/MS) As formas de provimento de cargo público são chamadas de originárias e derivadas. Entre essas últimas encontra-se o retorno do funcionário estável ao cargo anteriormente ocupado. Essa espécie de provimento é conhecida como:',
+                  shortQuestion: 'Como se chama o retorno do funcionário estável ao cargo anteriormente ocupado?',
+                  answer: 'Provimento Derivado é utilizado para a movimentação na carreira. O retorno do servidor estável ao cargo anteriormente ocupado (por exemplo, por inabilitação em estágio probatório de outro cargo) é a recondução.',
+                  alternatives: [ 'reversão', 'promoção', 'recondução', 'reintegração', 'aproveitamento' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(FGV-2024-AL/SC) João, servidor público estável, após a inabilitação em estágio probatório em outro cargo, busca retornar ao cargo de origem, em relação ao qual encontra-se em licença não remunerada. Nesse contexto, o agente público procurou a orientação técnica de como deve proceder para alcançar o seu intento. Nesse cenário, considerando o entendimento doutrinário e jurisprudencial dominante e preenchidos os requisitos legais, é correto afirmar que João retornará ao cargo de origem por meio do seguinte instituto jurídico:',
+                  shortQuestion: 'Servidor estável inabilitado em estágio probatório retorna ao cargo de origem por meio de qual instituto?',
+                  answer: 'João retornará ao cargo de origem por meio da recondução, que é uma modalidade de provimento derivado.',
+                  alternatives: [
+                    'aproveitamento, modalidade de provimento originário.',
+                    'reintegração, modalidade de provimento originário.',
+                    'reintegração, modalidade de provimento derivado.',
+                    'recondução, modalidade de provimento derivado.',
+                    'reversão, modalidade de provimento derivado.'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(UNIVIDA-2024-PREFEITURA DE IVAÍ/PR) Acerca da estabilidade no serviço público, é correto afirmar que:',
+                  shortQuestion: 'O que é correto afirmar sobre a estabilidade no serviço público?',
+                  answer: 'O STF decidiu que a demissão sem justa causa de empregados de empresas públicas e sociedades de economia mista, admitidos por concurso, deve ser devidamente motivada.',
+                  alternatives: [
+                    'Para a aquisição da estabilidade, o único requisito necessário para o servidor são os três anos de efetivo exercício em cargo efetivo.',
+                    'Não poderá o servidor público perder o cargo em virtude de exoneração para corte de gastos.',
+                    'Os empregados públicos gozam das prerrogativas de direito público, logo, resta presente a sua estabilidade.',
+                    'A avaliação de desempenho periódico não pode ser tácita.',
+                    'A dispensa de empregado de Administração Pública Indireta depende de motivação.'
+                  ],
+                  correctAlternativeIndex: 4
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO ACESS 2024- PREFEITURA DE CATAGUASES/MG) O conjunto de atribuições e responsabilidades previstas na estrutura organizacional que devem ser cometidas a um servidor define o que é o cargo público. A sua investidura ocorrerá com',
+                  shortQuestion: 'A investidura em cargo público ocorre com qual ato?',
+                  answer: 'A investidura em cargo público ocorrerá com a posse.',
+                  alternatives: [ 'a contratação.', 'a nomeação.', 'o exercício.', 'a posse.' ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO FÊNIX-2024- PREFEITURA DE ABELARDO LUZ/SC) Qual alternativa NÃO apresenta uma das formas de provimento em cargo público?',
+                  shortQuestion: 'Qual das opções NÃO é uma forma de provimento de cargo público?',
+                  answer: 'Aposentadoria é forma de vacância (deixar o cargo vago), e não de provimento (preencher o cargo).',
+                  alternatives: [ 'Reversão.', 'Nomeação.', 'Aproveitamento.', 'Aposentadoria.' ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO FÊNIX-2024- PREFEITURA DE ABELARDO LUZ/SC) Estabilidade é a garantia constitucional do servidor em permanecer no serviço, nomeado em caráter efetivo. O servidor habilitado em concurso público e empossado em cargo de provimento efetivo, depois de aprovado no estágio probatório, adquirirá a estabilidade no serviço público ao completar ______ de efetivo exercício. Qual alternativa preenche, CORRETAMENTE, a lacuna?',
+                  shortQuestion: 'Com quanto tempo de efetivo exercício o servidor adquire estabilidade?',
+                  answer: 'São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.',
+                  alternatives: [ '1 ano.', '2 anos.', '3 anos.', '4 anos.' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(UNIVIDA-2024-PREFEITURA DE IRAGUAÇU-PR) A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência. Sobre o tema administração pública assinale a alternativa INCORRETA:',
+                  shortQuestion: 'Qual afirmativa sobre administração pública é INCORRETA?',
+                  answer: 'A alternativa A está incorreta pois o Art. 37, IV da CF/88 dispõe que durante o prazo IMPRORROGÁVEL (e não prorrogável) o aprovado tem prioridade de convocação sobre novos concursados.',
+                  alternatives: [
+                    'durante o prazo prorrogável previsto no edital de convocação, aquele aprovado em concurso público de provas ou de provas e títulos será convocado com prioridade sobre novos concursados para assumir cargo ou emprego, na carreira.',
+                    'a lei reservará percentual dos cargos e empregos públicos para as pessoas portadoras de deficiência e definirá os critérios de sua admissão.',
+                    'é vedada a vinculação ou equiparação de quaisquer espécies remuneratórias para o efeito de remuneração de pessoal do serviço público.',
+                    'os vencimentos dos cargos do Poder Legislativo e do Poder Judiciário não poderão ser superiores aos pagos pelo Poder Executivo.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(FUNCERN-2024-ADAPTADA) De acordo com o Estatuto dos Servidores do Município, o servidor que passar em concurso público e não entrar em exercício dentro do prazo legal, ocorrerá a vacância por',
+                  shortQuestion: 'O que ocorre com o servidor que não entra em exercício no prazo legal?',
+                  answer: 'O servidor que passar em concurso público e não entrar em exercício dentro do prazo legal será exonerado de ofício.',
+                  alternatives: [ 'Demissão.', 'Abandono de cargo.', 'Exoneração “ex-ofício”.', 'Exoneração a pedido.' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(FUNDATEC-2024-PREFEITURA DE BAGÉ/RS) “O desempenho do cargo pelo funcionário nele provido” chama-se:',
+                  shortQuestion: 'Como se chama o desempenho do cargo pelo funcionário?',
+                  answer: 'Exercício é o efetivo desempenho, pelo servidor, das atribuições do cargo público.',
+                  alternatives: [ 'Exercício.', 'Demissão.', 'Exoneração.', 'Aposentadoria.', 'Afastamento.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(FUNDATEC-2024-PREFEITURA DE BAGÉ/RS) Conforme estabelece o Regime Jurídico dos Servidores do Estado de Rondônia, qual é o prazo de validade do concurso público?',
+                  shortQuestion: 'Qual o prazo de validade do concurso público em Rondônia?',
+                  answer: 'O prazo de validade do concurso público é de até dois anos, prorrogável por igual período.',
+                  alternatives: [
+                    '1 ano, prorrogável por igual período.',
+                    '2 anos, prorrogável por igual período.',
+                    '3 anos, prorrogável por igual período.',
+                    '4 anos, prorrogável por igual período.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO CONSULPLAN-2024-PREFEITURA DE PITANGUEIRAS/SP) Joana sofreu limitação em sua capacidade física e mental verificada em inspeção médica, sendo investida em cargo de atribuições e responsabilidades compatíveis com tal limitação. De acordo com o Estatuto dos Servidores, Joana passou por',
+                  shortQuestion: 'Servidora com limitação investida em cargo compatível passou por qual processo?',
+                  answer: 'Readaptação é a investidura do servidor em cargos de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental verificada em inspeção médica.',
+                  alternatives: [ 'reversão.', 'readaptação.', 'transferência.', 'aproveitamento' ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO CONSULPLAN-2024-PREFEITURA DE PITANGUEIRAS/SP) A idade mínima para investidura em cargo público, segundo o Estatuto dos Servidores Públicos, é de (anos):',
+                  shortQuestion: 'Qual a idade mínima para investidura em cargo público?',
+                  answer: 'A idade mínima para investidura em cargo público, segundo o Estatuto dos Servidores Públicos, é de 18 anos.',
+                  alternatives: [ '18.', '21.', '16, em qualquer caso.', '16, em caso de emancipação.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO CONSULPLAN-2024- ADAPTADA) Tendo em vista o Estatuto dos Servidores Públicos, uma vez empossado em cargo público, o servidor deve entrar em exercício. O prazo para que entre em exercício, contados a partir da data da posse, é de (dias):',
+                  shortQuestion: 'Qual o prazo para entrar em exercício após a posse?',
+                  answer: 'O prazo para que entre em exercício, contados a partir da data da posse, é de 30 dias (Art. 20 § 1º)',
+                  alternatives: [ '30.', '15.', '60.', '90.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO REFERÊNCIA-2024-ADAPTADA) Sobre o tema “nomeação”, disposto no Estatuto dos Servidores Municipais, analise os itens abaixo: I - A nomeação far-se-á em caráter efetivo, quando se tratar de cargo isolado ou de carreira. II - A nomeação far-se-á em comissão, para cargos de livre nomeação e exoneração. III - A nomeação far-se-á em função gratificada, exercida exclusivamente por servidores ocupantes de cargos efetivos. Está (ão) CORRETA (S):',
+                  shortQuestion: 'Quais afirmativas sobre "nomeação" estão corretas?',
+                  answer: 'Todas as afirmativas estão corretas. I - Nomeação para cargo efetivo. II - Nomeação para cargo em comissão. III - Função gratificada só para servidor efetivo.',
+                  alternatives: [ 'II, apenas.', 'I e II, apenas.', 'I e III, apenas.', 'Todas estão corretas.' ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(FAUEL- 2024- PREFEITURA DE MARINGÁ/PR) Os servidores públicos nomeados para cargo de provimento efetivo ficarão sujeitos ao estágio probatório, de acordo com o Estatuto dos Servidores Municipais e lei regulamentar específica, com duração de ________ de efetivo exercício no cargo em que foi empossado, contados a partir da data da entrada em exercício, durante o qual a sua aptidão e capacidade serão objeto de avaliação para o desempenho do cargo [...]. Agora, assinale a alternativa que completa CORRETAMENTE a lacuna do texto acima:',
+                  shortQuestion: 'Qual a duração do estágio probatório para servidores de provimento efetivo?',
+                  answer: 'São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.',
+                  alternatives: [ 'doze meses', 'três anos', 'seis anos', 'dez anos' ],
+                  correctAlternativeIndex: 1
+                }
+              ]
+            },
+            {
+              id: 'aula-00-apostila',
+              name: 'Aula 00 - Apostila (33 questões)',
+              cards: [
+                {
+                  id: '',
+                  question: '(FADESP - 2021) Sobre os agentes administrativos pode-se afirmar que',
+                  shortQuestion: 'Sobre os agentes administrativos, qual a afirmação correta?',
+                  answer: 'A opção correta é a LETRA B. Empregados públicos (regime celetista) têm relação contratual trabalhista regida pela CLT. Servidores públicos têm regime estatutário. Temporários exercem função pública (não cargo) com vínculo especial.',
+                  alternatives: [
+                    'os servidores públicos mantêm relação funcional de caráter contratual trabalhista regidos basicamente pela Consolidação das Leis do Trabalho.',
+                    'os empregados públicos mantêm relação funcional de caráter contratual trabalhista regidos basicamente pela Consolidação das Leis do Trabalho.',
+                    'os empregados temporários são contratados por tempo determinado para atender a necessidade excepcional de interesse público, exercendo cargo público próprio.',
+                    'os empregados temporários exercem função pública e detêm vínculo estatutário com a administração pública.',
+                    'os servidores públicos mantêm relação funcional de caráter estatutário no exercício de função pública remunerada temporária.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FUNDATEC - 2021) Em relação aos cargos, empregos e funções dos agentes administrativos, assinale a alternativa INCORRETA.',
+                  shortQuestion: 'Qual alternativa sobre agentes administrativos é INCORRETA?',
+                  answer: 'A alternativa incorreta é a A, pois os servidores ocupantes de cargos em comissão SÃO servidores estatutários, embora de regime especial (demissíveis ad nutum).',
+                  alternatives: [
+                    'Não são servidores estatutários, os ocupantes de cargo em comissão.',
+                    'O cargo público nem sempre é ocupado mediante concurso público.',
+                    'O emprego público é ocupado por empregado público, sempre celetista.',
+                    'O emprego público somente pode ser ocupado mediante concurso público.',
+                    'Servidores públicos são agentes estatutários que ocupam um cargo público.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(VUNESP – 2019 – Campinas) Um servidor público temporário, contratado para preencher uma vaga na administração pública indireta, é classificado como:',
+                  shortQuestion: 'Como é classificado um servidor público temporário?',
+                  answer: 'Servidor temporário é classificado como agente administrativo.',
+                  alternatives: [
+                    'Agente administrativo.',
+                    'Agente credenciado.',
+                    'Agente honorífico.',
+                    'Agente delegado.',
+                    'Agente político.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(CONSULPAM – 2023 – TCM-PA) Ester foi convocada para atuar como Júri em determinado processo que corria no Tribunal da sua cidade. Por conta disso, pode-se afirmar que Ester exercerá a função de:',
+                  shortQuestion: 'Qual a função de quem atua como jurado em um tribunal?',
+                  answer: 'Atuação como jurado é um exemplo clássico de agente honorífico.',
+                  alternatives: [
+                    'Agente honorífica.',
+                    'Agente delegada.',
+                    'Agente credenciada.',
+                    'Agente política.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(CEBRASPE – 2023 – MPE-PA) Esses agentes atuam com plena liberdade funcional, desempenhando suas atribuições com prerrogativas e responsabilidades próprias, estabelecidas na Constituição Federal de 1988 e em leis especiais. Têm normas específicas para sua escolha, sua investidura, sua conduta e seu processo por crimes funcionais e de responsabilidades, que lhe são privativos. Assinale a opção que indica corretamente a espécie de agente público a que o trecho precedente se refere.',
+                  shortQuestion: 'Agentes com prerrogativas e responsabilidades na CF/88 são classificados como?',
+                  answer: 'A descrição, que menciona competência estabelecida na Constituição e prerrogativas próprias, refere-se aos agentes políticos.',
+                  alternatives: [
+                    'agentes administrativos',
+                    'agentes honoríficos',
+                    'agentes credenciados',
+                    'agentes políticos',
+                    'agentes delegados'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(CEBRASPE – 2022 – DPE-RO) Assinale a opção que indica o tipo de agente público que consiste em um grupo de agentes que, mesmo sem ter uma investidura normal e regular, executa uma função pública em nome do Estado.',
+                  shortQuestion: 'Como se chama o agente que atua sem investidura normal?',
+                  answer: 'O agente de fato é aquele que atua sem ter uma investidura normal e regular, mas cujos atos podem ser validados em nome do interesse público.',
+                  alternatives: [
+                    'agente honorífico',
+                    'agente político',
+                    'agente administrativo',
+                    'agente credenciado',
+                    'agente de fato'
+                  ],
+                  correctAlternativeIndex: 4
+                },
+                {
+                  id: '',
+                  question: '(CEBRASPE - 2022 - PGE-RO) Acerca dos agentes públicos e de assuntos correlatos, assinale a opção correta.',
+                  shortQuestion: 'Sobre agentes públicos, qual a opção correta?',
+                  answer: 'A alternativa B está correta. As demais estão erradas: agentes públicos podem atuar de forma não remunerada (honoríficos); jurado é agente honorífico, não delegado; cargos em comissão são diferentes de funções de confiança; cargo público é exercido por servidor.',
+                  alternatives: [
+                    'A denominação agentes públicos engloba, de forma genérica, os sujeitos que exercem, necessariamente de forma remunerada, mandato, cargo, emprego ou função nas entidades públicas, por eleição, nomeação, designação, contratação ou qualquer outra forma de investidura ou vínculo.',
+                    'Empregado público é o agente público celetista aprovado em concurso público, cuja carteira de trabalho deve ser assinada.',
+                    'Pessoa designada para atuação como jurado em tribunal do júri é considerada agente público e classificada como agente delegado.',
+                    'Os cargos em comissão também são chamados de cargos de confiança e, de acordo com a Constituição Federal de 1988, só podem ser contratados para funções de direção.',
+                    'Denomina-se cargo público o conjunto de atribuições e responsabilidades que são previstas na estrutura organizacional e que devem ser exercidas pelo empregado público.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(MS CONCURSOS - 2014 - UFAC) Em relação às funções de confiança, a Constituição Federal de 1988 estabelece regras relativas aos cargos em comissão e funções de confiança. Portanto, estas deverão ser exercidas:',
+                  shortQuestion: 'Como devem ser exercidas as funções de confiança?',
+                  answer: 'As funções de confiança, por disposição constitucional, são exercidas exclusivamente por servidores ocupantes de cargo efetivo.',
+                  alternatives: [
+                    'Somente por servidores que ocupem cargos em comissão.',
+                    'Exclusivamente por servidores ocupantes de cargo efetivo.',
+                    'Por um percentual mínimo, previsto em lei, de servidores comissionados.',
+                    'Dando preferência aos servidores que ocupam cargo efetivo.',
+                    'Por um percentual máximo, previsto em lei específica dos servidores de carreira.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(COPEVE-UFAL - 2022 - TCE-AL) O Governador do Estado decidiu nomear seu irmão para o cargo de Secretário Estadual de Transportes, considerando a sua experiência na área, uma vez que é servidor de carreira. Dada a situação hipotética, é correto afirmar que a nomeação',
+                  shortQuestion: 'É válida a nomeação de irmão, servidor de carreira, para cargo de Secretário Estadual?',
+                  answer: 'A nomeação é válida, pois a Súmula Vinculante 13 do STF sobre nepotismo não se aplica a cargos de natureza política, como o de Secretário Estadual, salvo se houver fraude à lei (nepotismo cruzado ou falta de qualificação).',
+                  alternatives: [
+                    'é válida, já que não se considera nepotismo a nomeação de parente da autoridade nomeante, quando o nomeado for servidor de carreira da Administração Pública.',
+                    'é válida, já que a vedação ao nepotismo não alcança a nomeação para cargos de natureza política, salvo quando demonstrada a intenção de fraudar a lei.',
+                    'é inválida, uma vez que viola texto expresso de lei, configurando uma das hipóteses de improbidade administrativa.',
+                    'é inválida, por afrontar aos princípios da moralidade e impessoalidade, mas não constitui hipótese de improbidade administrativa.',
+                    'é inválida, por violar a Súmula Vinculante nº 13, configurando-se hipótese de nepotismo denominado cruzado.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FGV - 2022 - MPE-SC) João é servidor público do Ministério Público do Estado Beta e exerce a função de confiança de diretor do Departamento de Segurança e Inteligência. De acordo com o texto constitucional, é correto afirmar que João:',
+                  shortQuestion: 'Servidor que exerce função de confiança é necessariamente o quê?',
+                  answer: 'As funções de confiança, de acordo com a Constituição Federal, só podem ser ocupadas por servidores efetivos (de carreira).',
+                  alternatives: [
+                    'é necessariamente servidor ocupante de cargo em comissão;',
+                    'é necessariamente servidor ocupante de cargo efetivo;',
+                    'é necessariamente servidor não concursado e exonerável ad nutum;',
+                    'pode deixar de exercer a função de confiança apenas a pedido ou mediante processo administrativo disciplinar;',
+                    'pode ser servidor concursado ou não concursado, e não tem direito subjetivo de permanecer exercendo a função de confiança.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FGV – 2022 – TJDFT) Após mobilização, foi promulgada lei estadual permitindo a incorporação de valor de cargo em comissão à remuneração de servidor efetivo após 8 anos de exercício. Esse diploma normativo é:',
+                  shortQuestion: 'Lei que permite incorporar valor de cargo em comissão à remuneração é constitucional?',
+                  answer: 'Consoante regra constitucional (Art. 39, § 9º), é inconstitucional, pois é vedada a incorporação de vantagens de caráter temporário ou vinculadas ao exercício de função de confiança ou de cargo em comissão à remuneração do cargo efetivo.',
+                  alternatives: [
+                    'inconstitucional, pois é vedada a incorporação de vantagens vinculadas ao exercício de função de confiança ou de cargo em comissão à remuneração do cargo efetivo;',
+                    'inconstitucional, pois a não extensão do benefício da incorporação às vantagens vinculadas ao exercício de função de confiança caracteriza distinção arbitrária;',
+                    'inconstitucional, pois somente as vantagens vinculadas ao exercício de função de confiança podem ser incorporadas à remuneração do cargo efetivo;',
+                    'constitucional, desde que seja assegurada a incorporação proporcional da vantagem caso os oito anos consecutivos não sejam integralizados;',
+                    'constitucional, pois a incorporação das vantagens recebidas pelo servidor público por longos períodos é um imperativo de segurança jurídica.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(FGV - 2022 - Senado Federal) Em recente julgamento (ADI 6655/SE), o STF reafirmou os requisitos para criação de cargos em comissão. Qual das alternativas abaixo corresponde a um desses requisitos?',
+                  shortQuestion: 'Qual é um dos requisitos do STF para a criação de cargos em comissão?',
+                  answer: 'O STF (Tema 1010) estabeleceu que as atribuições dos cargos em comissão devem estar descritas em lei de forma clara e objetiva.',
+                  alternatives: [
+                    'as atribuições dos cargos em comissão devem estar descritas, de forma clara e objetiva, na própria lei que os instituir.',
+                    'o número de cargos comissionados criados não deve guardar proporcionalidade com o número de servidores ocupantes de cargos efetivos no ente que os criar.',
+                    'a criação dos cargos em comissão não deve pressupor a necessária relação de confiança entre a autoridade nomeante e o servidor nomeado.',
+                    'o exercício de função de confiança pode recair sobre pessoa não concursada.',
+                    'a criação de cargos em comissão se justifica para atividades burocráticas, técnicas ou operacionais.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(FGV - 2018 - AL-RO) Determinada autoridade pretende nomear um conhecido para exercer função de confiança na Administração Pública. Sobre a nomeação, à luz da sistemática constitucional, assinale a afirmativa correta.',
+                  shortQuestion: 'Para exercer função de confiança, qual requisito o nomeado deve cumprir?',
+                  answer: 'Funções de confiança são exclusivas para servidores que já ocupam cargo de provimento efetivo. Portanto, a nomeação só pode ser feita caso o conhecido já ocupe cargo efetivo.',
+                  alternatives: [
+                    'Pode ser feita quer o conhecido ocupe, quer não, cargo na administração municipal.',
+                    'Somente pode ser feita, caso não haja aprovado em concurso público apto a desempenhá-la.',
+                    'Somente pode ser feita, caso o conhecido ocupe cargo em comissão na administração municipal.',
+                    'Somente pode ser feita caso o conhecido seja previamente aprovado em concurso público para esse fim.',
+                    'Somente pode ser feita caso o conhecido ocupe cargo de provimento efetivo na administração,'
+                  ],
+                  correctAlternativeIndex: 4
+                },
+                {
+                  id: '',
+                  question: '(Pref. Barra Longa - 2022) Segundo o Estatuto do Servidor Público, não poderá ser investido em cargo público:',
+                  shortQuestion: 'Quem NÃO pode ser investido em cargo público?',
+                  answer: 'A idade mínima para investidura em cargo público é de 18 anos, portanto, um menor de 18 anos não poderá ser investido.',
+                  alternatives: [
+                    'A pessoa naturalizada;',
+                    'O menor de 18 anos;',
+                    'Quem estiver em gozo de seus direitos políticos;',
+                    'Quem não estiver quite com as obrigações militares.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(IBADE - 2022 - CRC-RO - adaptada) Assinale a alternativa que esteja em DESACORDO com os requisitos básicos para investidura em cargo público.',
+                  shortQuestion: 'Qual alternativa NÃO é um requisito básico para investidura em cargo público?',
+                  answer: 'A reserva de vagas para portadores de deficiência é uma regra do concurso, não um requisito de investidura para o candidato. Os outros (direitos políticos, aptidão física, quitação militar/eleitoral) são requisitos básicos.',
+                  alternatives: [
+                    'Gozo dos direitos políticos.',
+                    'Até 25% das vagas reservadas aos portadores de deficiência.',
+                    'Aptidão física e mental.',
+                    'Quitação com as obrigações militares.',
+                    'Quitação com as obrigações eleitorais.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FCC - TRT 21) Os cargos públicos',
+                  shortQuestion: 'Qual a característica correta dos cargos públicos?',
+                  answer: 'Cargo público, por definição, é criado por lei e remunerado pelos cofres públicos. As demais alternativas estão incorretas.',
+                  alternatives: [
+                    'podem ter seus vencimentos pagos somente pelos cofres públicos.',
+                    'podem ter seus vencimentos pagos pelos cofres públicos e privados.',
+                    'são acessíveis aos brasileiros natos e naturalizados, mas não aos estrangeiros.',
+                    'serão criados por ato administrativo, não sendo necessário que constem da estrutura organizacional.',
+                    'são criados por lei e alterados por ato administrativo.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(CEBRASPE – 2018 - SEFAZ-RS) Conforme o Estatuto dos Servidores Públicos, em razão da excelência dos serviços prestados, pode ser promovido servidor investido em',
+                  shortQuestion: 'Um servidor pode ser promovido se estiver investido em qual tipo de cargo?',
+                  answer: 'A promoção é uma forma de desenvolvimento na carreira, aplicável apenas a servidores de provimento efetivo em cargos organizados em carreira.',
+                  alternatives: [
+                    'cargo em comissão, uma vez que tal categoria é organizada em carreira.',
+                    'cargo em comissão, desde que devidamente aprovado em concurso público para esse cargo.',
+                    'cargo de provimento efetivo, porque tal categoria é organizada em carreira.',
+                    'cargo de provimento efetivo, que é uma categoria de livre nomeação.',
+                    'cargo sem organização de carreira, por isso sua promoção é possível.'
+                  ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(IBFC - 2021 - IAP-PR - adaptada) Acerca do disposto no Estatuto dos Servidores do Estado, analise as afirmativas: I. Cargo é o conjunto de atribuições e responsabilidades... II. Os cargos podem ser de provimento efetivo ou de provimento de comissão. III. Para a nomeação de cargo de provimento em comissão é necessária a aprovação prévia em concurso público... Assinale a alternativa correta:',
+                  shortQuestion: 'Sobre o Estatuto dos Servidores, quais afirmativas sobre cargo e nomeação estão corretas?',
+                  answer: 'As afirmativas I e II estão corretas. A afirmativa III está errada pois a nomeação para cargo em comissão é de livre nomeação e exoneração, não exigindo concurso público.',
+                  alternatives: [
+                    'As afirmativas I, II e III estão corretas',
+                    'Apenas as afirmativas I e II estão corretas',
+                    'Apenas as afirmativas II e III estão corretas',
+                    'Apenas as afirmativas I e III estão corretas',
+                    'Apenas a afirmativa II está correta'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO AOCP - 2022 - IPE Prev - adaptada) Considerando o Regime Jurídico próprio dos servidores públicos do Estado, são regidos por esta lei: I. O servidor titular de cargo efetivo do Poder Executivo; II. O militar estadual; III. O servidor ocupante de cargo público de provimento em comissão; IV. O servidor ocupante de emprego público.',
+                  shortQuestion: 'Quais servidores são regidos pelo Regime Jurídico do Estado?',
+                  answer: 'O regime jurídico aplica-se aos servidores civis, sejam titulares de cargo efetivo (I) ou ocupantes de cargo em comissão (III). Não se aplica a militares (regime próprio) nem a empregados públicos (regime celetista).',
+                  alternatives: [
+                    'Apenas I e II.',
+                    'Apenas I e III.',
+                    'Apenas II e III.',
+                    'Apenas I, II e IV.',
+                    'I, II, III e IV.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(CEBRASPE - 2021 - AL-CE) A respeito dos servidores públicos, julgue os itens subsequentes. I Servidores estatutários ocupam cargos públicos. II Servidores públicos são regidos por estatuto criado por meio de lei pelo órgão em que atuam. III Cargo público é criado por lei, a qual estabelece denominação específica, atribuições próprias e recebimento pelos cofres públicos. Assinale a opção correta.',
+                  shortQuestion: 'Sobre servidores e cargos públicos, quais itens estão corretos?',
+                  answer: 'Os itens I e III estão corretos. O item II está errado, pois o estatuto é criado por lei do ente federativo (União, Estado, Município), não especificamente do órgão.',
+                  alternatives: [
+                    'Somente os itens I e II estão certos.',
+                    'Somente os itens I e III estão certos.',
+                    'Somente os itens II e III estão certos.',
+                    'Somente o item I está certo.',
+                    'Todos os itens estão certos.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FUNDATEC – 2022 – CEASA-RS) Com base em Meirelles (2018), relacione a Coluna 1 à Coluna 2, associando as expressões aos respectivos conceitos relativos à Administração Pública. Coluna 1: 1. Agentes credenciados. 2. Agentes públicos. 3. Agentes políticos. 4. Agentes administrativos. Coluna 2: () São todas as pessoas físicas incumbidas de alguma função estatal. () São os componentes do Governo (primeiros escalões). () São todos aqueles que se vinculam ao Estado por relações profissionais. () São os que recebem a incumbência de representar a Administração.',
+                  shortQuestion: 'Relacione os tipos de agentes públicos às suas definições.',
+                  answer: 'A sequência correta é 2-3-4-1. (2) Agentes Públicos (conceito geral); (3) Agentes Políticos (componentes do governo); (4) Agentes Administrativos (vínculo profissional); (1) Agentes Credenciados (representantes).',
+                  alternatives: [ '4-3-2-1.', '3-2-1-4.', '2-3-4-1.', '3-4-2-1.', '2-4-1-3.' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(UFMG - 2023) Em relação aos servidores estatais, também chamados de Agentes Administrativos, é CORRETO afirmar que',
+                  shortQuestion: 'O que é correto afirmar sobre os servidores estatais (agentes administrativos)?',
+                  answer: 'A afirmativa correta é a C. O vínculo dos servidores estatutários é de natureza legal (regido por estatuto), e seus direitos e obrigações decorrem diretamente da lei, não de um contrato.',
+                  alternatives: [
+                    'é facultada a aplicação de contratação de empregados sob o regime da CLT para prestação de serviços na Administração Pública, conforme a discricionariedade do gestor do órgão.',
+                    'os servidores estatutários têm vínculo temporário com a Administração, de natureza profissional, sem prazo determinado, para execução de atividades transitórias de interesse do Estado.',
+                    'os servidores estatutários têm vínculo de natureza legal e todos os seus direitos e obrigações decorrem diretamente da lei.',
+                    'consideram-se servidores temporários todos aqueles contratados, com base no art. 37, inciso IX, da Constituição Federal, para atendimento, em caráter permanente, de todas as necessidades dos órgãos públicos.'
+                  ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(UNIRIO – 2012) Em seus aspectos gerais, agentes públicos são as pessoas físicas e jurídicas que exercem alguma atividade estatal. O conjunto dos agentes públicos inclui os agentes políticos, administrativos, honoríficos e delegados. É um exemplo de agente público honorífico.',
+                  shortQuestion: 'Qual das opções é um exemplo de agente público honorífico?',
+                  answer: 'O Mesário Eleitoral é o exemplo clássico de agente honorífico, que presta um serviço público relevante (múnus público) de forma transitória e, em geral, sem remuneração direta.',
+                  alternatives: [
+                    'Ministros de Estado.',
+                    'Secretários de Governo.',
+                    'Oficiais das forças armadas.',
+                    'Mesários Eleitorais.',
+                    'Servidores da Administração Direta.'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(FUNRIO – 2018 – Câmara São João do Meriti) Há três espécies de agentes públicos: os políticos, os administrativos e os honoríficos. São exemplos de agentes políticos:',
+                  shortQuestion: 'Quais são exemplos de agentes políticos?',
+                  answer: 'Agentes políticos são aqueles dos mais altos escalões do poder, como Presidente, Governadores, Prefeitos, Vice-Prefeitos, Ministros e Secretários de Estado.',
+                  alternatives: [
+                    'Servidores Estatutários, Prefeitos, Ministros de Estado.',
+                    'Servidores Estatutários, Empregados Públicos, Contratados temporários.',
+                    'Prefeitos, Vice-Prefeitos, Ministros de Estado.',
+                    'Empregados Públicos, Presidente da República, Ministros de Estado.',
+                    'Empregados Públicos, Contratados temporários, Governadores.'
+                  ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(SELECON 2023 Pref. Nova Mutum) Trata-se de agente público cuja característica é praticar certa atividade específica ou representar o Poder Público em determinado ato:',
+                  shortQuestion: 'Como se chama o agente que representa o Poder Público em um ato específico?',
+                  answer: 'Cabe ao agente credenciado representar o poder público em atividade específica, mediante remuneração.',
+                  alternatives: [ 'agente delegado', 'agente honorífico', 'agente credenciado', 'agente administrativo' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(CEBRASPE – 2023 MPE-AM) Um cidadão que integra o conselho de sentença de um tribunal do júri é considerado, nessa situação,',
+                  shortQuestion: 'Como é classificado um jurado de tribunal do júri?',
+                  answer: 'A atuação como jurado é um exemplo clássico de múnus público, sendo classificado como agente público honorífico.',
+                  alternatives: [ 'agente político.', 'agente público credenciado.', 'servidor público temporário.', 'agente público honorífico.', 'servidor público voluntário.' ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(IBFC – 2023 – SEAD-GO) Os agentes públicos se dividem em agentes políticos, servidores públicos e particulares em colaboração com o Estado. Assinale a alternativa que apresenta um agente político.',
+                  shortQuestion: 'Qual das alternativas apresenta um agente político?',
+                  answer: 'O Vereador é um agente político, pois exerce um mandato eletivo, representando o poder legislativo municipal.',
+                  alternatives: [ 'Assessor Parlamentar', 'Fiscal do IBAMA', 'Vereador', 'Funcionário da Petrobrás', 'Diretora escolar' ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(AVANÇA SP – 2023) Em seu sentido estrito, __________ é a expressão utilizada para identificar aqueles agentes que mantêm uma relação permanente com o Estado, em regime estatutário, por integrarem o quadro funcional das pessoas políticas e de suas autarquias e fundações públicas. Assinale a alternativa que preenche corretamente a lacuna:',
+                  shortQuestion: 'Como se chama o agente com relação permanente e estatutária com o Estado?',
+                  answer: 'A expressão que define os agentes com vínculo permanente e estatutário com o Estado é "servidor público".',
+                  alternatives: [ 'servidor público.', 'empregado público.', 'funcionário público.', 'agente político.', 'agente credenciado.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(UECE-CEV -2018 -SECULT-CE) NÃO se aplica o Regime Jurídico do Funcionário Civil do Estado do Ceará aos',
+                  shortQuestion: 'A qual cargo NÃO se aplica o Regime Jurídico comum dos servidores?',
+                  answer: 'O regime jurídico comum dos servidores ("funcionários civis") não se aplica a carreiras com estatutos próprios e prerrogativas especiais, como os Juízes de Direito (Magistratura).',
+                  alternatives: [ 'Procuradores do Estado.', 'Juízes de Direito do Estado.', 'Secretários do Estado.', 'Servidores do Poder Legislativo.' ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FAFIPA – 2019 – CREA-PR) Em se retratando das disposições gerais previstas na referida legislação, assinale a alternativa INCORRETA:',
+                  shortQuestion: 'Sobre as disposições gerais de estatutos de servidores, qual a alternativa INCORRETA?',
+                  answer: 'A alternativa D está incorreta. A prestação de serviços gratuitos ao Estado é proibida, SALVO nos casos previstos em lei. A alternativa afirma que não há exceções.',
+                  alternatives: [
+                    'Servidor é a pessoa legalmente investida em cargo público.',
+                    'Cargo público é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional que devem ser cometidas a um servidor.',
+                    'Os cargos públicos, acessíveis a todos os brasileiros, são criados por lei, com denominação própria e vencimento pago pelos cofres públicos, para provimento em caráter efetivo ou em comissão.',
+                    'É proibida a prestação de serviços gratuitos, sem exceções.',
+                    'É proibida a prestação de serviços gratuitos, salvo os casos previstos em lei.'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(IBFC – 2022 – DPE-MT) De acordo com a Lei que institui o estatuto dos Servidores Públicos da Administração Direta, das Autarquias e das Fundações Estaduais criadas e mantidas pelo Poder Público, assinale a alternativa incorreta.',
+                  shortQuestion: 'De acordo com o estatuto dos servidores, qual a alternativa INCORRETA?',
+                  answer: 'A alternativa C está incorreta ao afirmar que os cargos públicos são acessíveis a "brasileiros privilegiados" e "sem necessidade de concurso". O acesso a cargos efetivos é amplo e depende de concurso público.',
+                  alternatives: [
+                    'Para efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público',
+                    'Cargo Público integrante da carreira é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional que deve ser cometido a um servidor',
+                    'Os cargos públicos são criados por Lei Complementar, e são acessíveis a alguns brasileiros privilegiados, escolhidos a cada mandato, sem necessidade de concurso ou comprovação de experiência',
+                    'É proibida a prestação de serviços gratuitos, salvo os casos previstos em Lei'
+                  ],
+                  correctAlternativeIndex: 2
+                },
+                {
+                  id: '',
+                  question: '(VUNESP – 2019 – UFABC) A respeito do regime jurídico dos servidores públicos civis da União, das autarquias e das fundações públicas federais, assinale a alternativa correta.',
+                  shortQuestion: 'Sobre o regime jurídico dos servidores federais, qual a alternativa CORRETA?',
+                  answer: 'A opção correta é a LETRA B, que define corretamente o que é um cargo público.',
+                  alternatives: [
+                    'Servidor é a pessoa legalmente investida do serviço público.',
+                    'Cargo público é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional que devem ser cometidas a um servidor.',
+                    'Os cargos públicos, acessíveis a todos os brasileiros natos, são criados por lei complementar, com denominação própria e vencimento pago pelos cofres públicos.',
+                    'É absolutamente proibida a prestação de serviços gratuitos.',
+                    'O provimento dos cargos públicos far-se-á mediante ato da autoridade competente do Poder Executivo, ainda que se trate de cargo da estrutura de outro Poder.'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(IADES - 2023 – Polícia Científica GOIAS) De acordo com a Lei Estadual que dispõe acerca do regime jurídico dos servidores públicos civis do estado, assinale a alternativa que apresenta o conceito de servidor público.',
+                  shortQuestion: 'Qual o conceito de servidor público segundo a lei estadual?',
+                  answer: 'O conceito de servidor público é "pessoa legalmente investida em cargo público".',
+                  alternatives: [
+                    'Pessoa com atribuições e responsabilidades previstas na estrutura organizacional.',
+                    'Pessoa legalmente investida em cargo público.',
+                    'Denominação própria, criada por lei, com subsídios ou vencimentos pagos pelos cofres públicos.',
+                    'Pessoa que presta serviços a entidades privadas.',
+                    'Servidor que esteja em disponibilidade'
+                  ],
+                  correctAlternativeIndex: 1
+                },
+                {
+                  id: '',
+                  question: '(FGV - 2022 -PC-RJ) Joana é servidora pública e exerce função de confiança na Polícia Civil do Estado Alfa, sendo diretora do Departamento de Recursos Humanos. Observadas as disposições sobre o tema previstas na Constituição da República de 1988, é correto afirmar que Joana é necessariamente servidora:',
+                  shortQuestion: 'Servidora que exerce função de confiança é necessariamente...',
+                  answer: 'As funções de confiança só podem ser ocupadas por servidores efetivos.',
+                  alternatives: [ 'celetista;', 'não concursada;', 'contratada temporariamente;', 'ocupante de cargo efetivo;', 'ocupante de cargo em comissão.' ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(QUADRIX - 2022 - CAU-SC) Com relação a cargo, emprego e função pública, assinale a alternativa correta.',
+                  shortQuestion: 'Sobre cargo, emprego e função pública, qual a alternativa correta?',
+                  answer: 'As funções de confiança são exercidas exclusivamente por servidores ocupantes de cargo efetivo. As outras alternativas estão incorretas pois cargos em comissão não são só para chefia, e podem ser preenchidos por não servidores.',
+                  alternatives: [
+                    'As funções de confiança são exercidas exclusivamente por servidores ocupantes de cargo efetivo.',
+                    'Os cargos em comissão destinam-se exclusivamente às atribuições de chefia.',
+                    'As funções de confiança destinam-se apenas às atribuições de assessoramento.',
+                    'É vedado o preenchimento de cargos em comissão por servidores ocupantes de cargo efetivo.',
+                    'As funções de confiança são de livre nomeação e exoneração, acessíveis a qualquer pessoa, ainda que esta não seja detentora de cargo efetivo.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(INSTITUTO CONSULPLAN - 2021 - TJ-MS) Cibele ER, servidora pública efetiva do Ministério da Justiça, ocupando cargo de nível superior, veio a ser convidada para atuar em função de confiança, chefiando determinado setor. Após um período, recebe convite para trabalhar no Ministério da Defesa, ocupando outra função de confiança. Nos termos da Constituição Federal, pode-se afirmar que:',
+                  shortQuestion: 'Servidora efetiva que exerce função de confiança pode incorporar o valor à remuneração?',
+                  answer: 'É vedada pela Constituição Federal a incorporação de vantagens de caráter temporário ou vinculadas ao exercício de função de confiança ou de cargo em comissão à remuneração do cargo efetivo.',
+                  alternatives: [
+                    'A incorporação à remuneração dos valores decorrentes da função de confiança não ocorrerá.',
+                    'Haverá incorporação de metade do valor da função de confiança na remuneração do servidor.',
+                    'Haverá incorporação da totalidade do valor da função de confiança na remuneração do servidor.',
+                    'A incorporação à remuneração dos valores decorrentes da função de confiança está limitada ao teto.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(IESES - 2021 - TJ-RO) São requisitos básicos para investidura em cargo público, entre outros: I. Ser brasileiro. II. O gozo dos direitos políticos. III. A quitação com as obrigações militares e eleitorais. IV. A idade mínima de dezoito anos. A sequência correta é:',
+                  shortQuestion: 'Quais são os requisitos básicos para investidura em cargo público?',
+                  answer: 'Todos os itens listados (ser brasileiro, gozo dos direitos políticos, quitação militar/eleitoral, e idade mínima de 18 anos) são requisitos básicos para a investidura em cargo público.',
+                  alternatives: [
+                    'a) Apenas a assertiva IV está incorreta.',
+                    'b) Apenas as assertivas II, III e IV estão corretas.',
+                    'c) Apenas as assertivas I e IV estão corretas.',
+                    'd) As assertivas I, II, III e IV estão corretas.'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(OBJETIVA - 2022) Considerando-se o Regime Jurídico dos Servidores Públicos do Estado, analisar a sentença abaixo: É vedado cometer ao servidor atribuições diversas das de seu cargo, exceto encargos de direção, chefia ou assessoramento e comissões legais (1ª parte). Ser brasileiro e ter idade mínima de dezoito anos não são requisitos para ingresso no serviço público (2ª parte). Os cargos públicos serão providos apenas por nomeação (3ª parte). A sentença está:',
+                  shortQuestion: 'Analisando as 3 partes da sentença, qual(is) está(ão) correta(s)?',
+                  answer: 'A 1ª parte está correta. A 2ª está errada, pois ser brasileiro e ter 18 anos são requisitos. A 3ª está errada, pois há outras formas de provimento além da nomeação. Portanto, apenas a 1ª parte está correta.',
+                  alternatives: [
+                    'Correta somente em sua 1ª parte.',
+                    'Correta somente em suas 1ª e 2ª partes.',
+                    'Correta somente em suas 1ª e 3ª partes.',
+                    'Correta somente em suas 2ª e 3ª partes.',
+                    'Totalmente incorreta.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(FUNDEP - 2022 - Câmara Pirapora) A jurisprudência do Supremo Tribunal Federal firmou o entendimento de que é inconstitucional a exclusão de certame público de candidato por este responder a inquérito policial. Tal posicionamento jurisprudencial visa à proteção do seguinte direito ou garantia fundamental:',
+                  shortQuestion: 'A impossibilidade de eliminar candidato que responde a inquérito policial protege qual garantia?',
+                  answer: 'A proibição de eliminar candidatos de concurso público apenas por responderem a inquérito policial ou ação penal sem trânsito em julgado baseia-se no princípio da presunção de inocência.',
+                  alternatives: [ 'Livre exercício de emprego ou profissão.', 'Ampla defesa.', 'Livre manifestação do pensamento.', 'Presunção de inocência.' ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(FGV - 2021 - PC-RN) João se inscreveu em concurso público para provimento de certo cargo efetivo na área da segurança pública no Estado Alfa. Após ser aprovado na prova objetiva, João recebeu um comunicado da entidade organizadora do concurso informando-lhe que seria realizado um exame psicotécnico, de caráter eliminatório. Tendo em vista que não havia previsão em lei nem no edital do concurso para tal exame psicotécnico, João impetrou mandado de segurança. De acordo com a jurisprudência do STJ, a pretensão de João:',
+                  shortQuestion: 'Candidato pode ser submetido a psicotécnico sem previsão em lei e no edital?',
+                  answer: 'De acordo com a Súmula Vinculante 44 do STF, o exame psicotécnico só pode ser exigido se houver previsão em lei e previsão no edital, com critérios objetivos. Portanto, a pretensão de João merece prosperar.',
+                  alternatives: [
+                    'não merece prosperar, pois há discricionariedade do Estado Alfa para definir quais concursos públicos devem exigir exame psicotécnico.',
+                    'não merece prosperar, pois há discricionariedade da entidade organizadora para definir quais concursos públicos devem exigir exame psicotécnico.',
+                    'não merece prosperar, desde que todos os candidatos sejam submetidos ao mesmo exame psicotécnico.',
+                    'merece prosperar pois haveria necessidade de prévia previsão em lei e previsão no edital com a devida publicidade dos critérios objetivos fixados e possibilidade de recurso;',
+                    'merece prosperar, pois haveria necessidade de prévia previsão no edital do exame psicotécnico independentemente de previsão em lei.'
+                  ],
+                  correctAlternativeIndex: 3
+                },
+                {
+                  id: '',
+                  question: '(AOCP 2014 MPE-BA) - De acordo com o Estatuto dos Servidores Públicos Civis do Estado, são requisitos básicos para ingresso no serviço público, EXCETO',
+                  shortQuestion: 'Qual NÃO é um requisito básico para ingresso no serviço público?',
+                  answer: 'A idade mínima para ingresso no serviço público é de 18 anos, não 21. Portanto, esta é a exceção.',
+                  alternatives: [
+                    'idade mínima de vinte e um anos.',
+                    'nacionalidade brasileira ou equiparada.',
+                    'gozo dos direitos políticos.',
+                    'quitação com as obrigações militares e eleitorais.',
+                    'nível de escolaridade exigido para o exercício do cargo.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(IDECAN – 2023 – SEFAZ-RR) No Estado, são requisitos básicos para a investidura em cargo público estadual: I. Gozo dos direitos políticos. II. Quitação com as obrigações militares e eleitorais. III. Aptidão física e mental. IV. Curso de formação. V. Idade mínima de dezesseis anos. Estão corretos apenas os itens agrupados em',
+                  shortQuestion: 'Quais são requisitos básicos para investidura em cargo público estadual?',
+                  answer: 'Os requisitos básicos são Gozo dos direitos políticos (I), Quitação com obrigações militares e eleitorais (II) e Aptidão física e mental (III). Curso de formação pode ser uma etapa do concurso, e a idade mínima é 18, não 16.',
+                  alternatives: [ 'a) I, II e III.', 'b) I, II e IV.', 'c) I, III e V.', 'e) I, II, III e IV.', 'e) II, IV e V.' ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(URFRJ – 2023) Segundo o Estatuto, a alternativa que descreve corretamente um dos requisitos básicos de investidura do cargo público é',
+                  shortQuestion: 'Qual é um dos requisitos básicos para investidura em cargo público?',
+                  answer: 'Dentre as opções, o gozo dos direitos políticos é um dos requisitos básicos para a investidura em cargo público.',
+                  alternatives: [
+                    'gozo dos direitos políticos.',
+                    'nível superior de escolaridade.',
+                    'idade mínima de vinte e um anos.',
+                    'aptidão física, mental e psicológica.',
+                    'quitação das obrigações militares, eleitorais, tributárias e fiscais.'
+                  ],
+                  correctAlternativeIndex: 0
+                },
+                {
+                  id: '',
+                  question: '(CESGRANRIO – 2023 – AGERIO) A banca organizadora de um concurso para o cargo de agente de saúde em um determinado município decide estabelecer, como etapa necessária para o certame, a realização de avaliação psicológica. Para sujeitar o candidato a cargo público a exame psicotécnico antes mesmo da publicação do ato em que se organiza o certame, é indispensável a previsão',
+                  shortQuestion: 'O que é indispensável para a exigência de exame psicotécnico em concurso?',
+                  answer: 'A exigência do exame psicotécnico em concurso depende de previsão em lei, não bastando a previsão apenas em edital ou outros atos normativos inferiores.',
+                  alternatives: [ 'no edital', 'em aviso', 'em portaria', 'em lei', 'em resolução' ],
                   correctAlternativeIndex: 3
                 }
               ]

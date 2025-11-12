@@ -1,5 +1,5 @@
 import { GoogleGenAI, Type } from "@google/genai";
-import { Card } from '../types';
+import { Card } from '../types.ts';
 
 export const generateFlashcards = async (topic: string, count: number): Promise<Omit<Card, 'id'>[]> => {
   try {
