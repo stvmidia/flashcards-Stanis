@@ -2242,17 +2242,7 @@ const generateFlashcards = async (topic: string, count: number): Promise<Omit<Ca
 // --- END OF lib/gemini.ts ---
 
 // --- START OF components/Flashcard.tsx ---
-interface FlashcardProps {
-  question: string;
-  shortQuestion?: string;
-  answer: string;
-  isFlipped: boolean;
-  onClick: () => void;
-  cardNumber: number;
-  totalCards: number;
-}
-
-const Flashcard = ({ question, shortQuestion, answer, isFlipped, onClick, cardNumber, totalCards }: FlashcardProps) => {
+const Flashcard = ({ question, shortQuestion, answer, isFlipped, onClick, cardNumber, totalCards }) => {
   const displayQuestion = shortQuestion || question;
   return (
     <div
@@ -2293,44 +2283,33 @@ const Flashcard = ({ question, shortQuestion, answer, isFlipped, onClick, cardNu
 // --- END OF components/Flashcard.tsx ---
 
 // --- START OF components/ExamQuestion.tsx ---
-interface ExamQuestionProps {
-  question: string;
-  answer: string;
-  alternatives?: string[];
-  correctAlternativeIndex?: number;
-  isAnswerVisible: boolean;
-  onToggleAnswer: () => void;
-  cardNumber: number;
-  totalCards: number;
-}
-
-const ExamQuestion = ({ question, answer, alternatives, correctAlternativeIndex, isAnswerVisible, onToggleAnswer, cardNumber, totalCards }: ExamQuestionProps) => {
-  const EyeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const ExamQuestion = ({ question, answer, alternatives, correctAlternativeIndex, isAnswerVisible, onToggleAnswer, cardNumber, totalCards }) => {
+  const EyeIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.432 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
     </svg>
   );
 
-  const EyeSlashIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  const EyeSlashIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.243 4.243L6.228 6.228" />
     </svg>
   );
 
-  const CheckCircleIconForExam = (props: React.SVGProps<SVGSVGElement>) => (
+  const CheckCircleIconForExam = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" {...props}>
       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
     </svg>
   );
 
-  const XCircleIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  const XCircleIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" {...props}>
       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
     </svg>
   );
 
-  const [selectedAlternative, setSelectedAlternative] = React.useState<number | null>(null);
+  const [selectedAlternative, setSelectedAlternative] = React.useState(null);
 
   React.useEffect(() => {
     setSelectedAlternative(null);
@@ -2408,17 +2387,6 @@ const ExamQuestion = ({ question, answer, alternatives, correctAlternativeIndex,
 // --- END OF components/ExamQuestion.tsx ---
 
 // --- START OF components/SettingsModal.tsx ---
-interface SettingsModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    onSave: (categoryId: string, deckId: string, studyMode: 'flashcard' | 'exam', studyUnstudiedOnly: boolean) => void;
-    categories: Category[];
-    currentCategoryId: string;
-    currentDeckId: string;
-    currentStudyMode: 'flashcard' | 'exam';
-    currentStudyUnstudiedOnly: boolean;
-}
-
 const SettingsModal = ({ 
     isOpen, 
     onClose, 
@@ -2428,8 +2396,8 @@ const SettingsModal = ({
     currentDeckId, 
     currentStudyMode,
     currentStudyUnstudiedOnly
-}: SettingsModalProps) => {
-    const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
+}) => {
+    const XIcon = (props) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
       </svg>
@@ -2437,7 +2405,7 @@ const SettingsModal = ({
 
     const [tempCategoryId, setTempCategoryId] = useState(currentCategoryId);
     const [tempDeckId, setTempDeckId] = useState(currentDeckId);
-    const [tempStudyMode, setTempStudyMode] = useState<'flashcard' | 'exam'>(currentStudyMode);
+    const [tempStudyMode, setTempStudyMode] = useState(currentStudyMode);
     const [tempStudyUnstudiedOnly, setTempStudyUnstudiedOnly] = useState(currentStudyUnstudiedOnly);
 
     useEffect(() => {
@@ -2453,7 +2421,7 @@ const SettingsModal = ({
         return null;
     }
     
-    const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleCategoryChange = (e) => {
         const newCatId = e.target.value;
         setTempCategoryId(newCatId);
         const category = categories.find(c => c.id === newCatId);
@@ -2542,7 +2510,7 @@ const SettingsModal = ({
                                     name="mode-selection"
                                     value="flashcard"
                                     checked={tempStudyMode === 'flashcard'}
-                                    onChange={(e) => setTempStudyMode(e.target.value as 'flashcard' | 'exam')}
+                                    onChange={(e) => setTempStudyMode(e.target.value)}
                                     className="h-5 w-5 text-blue-600 border-gray-300 focus:ring-blue-500"
                                 />
                                 <label htmlFor="mode-flashcard" className="ml-3 block text-lg text-gray-800 cursor-pointer w-full">
@@ -2557,7 +2525,7 @@ const SettingsModal = ({
                                     name="mode-selection"
                                     value="exam"
                                     checked={tempStudyMode === 'exam'}
-                                    onChange={(e) => setTempStudyMode(e.target.value as 'flashcard' | 'exam')}
+                                    onChange={(e) => setTempStudyMode(e.target.value)}
                                     className="h-5 w-5 text-blue-600 border-gray-300 focus:ring-blue-500"
                                 />
                                 <label htmlFor="mode-exam" className="ml-3 block text-lg text-gray-800 cursor-pointer w-full">
@@ -2608,15 +2576,8 @@ const SettingsModal = ({
 // --- END OF components/SettingsModal.tsx ---
 
 // --- START OF components/GenerateCardsModal.tsx ---
-interface GenerateCardsModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onGenerate: (topic: string, count: number, categoryId: string) => Promise<void>;
-  categories: Category[];
-}
-
-const GenerateCardsModal = ({ isOpen, onClose, onGenerate, categories }: GenerateCardsModalProps) => {
-  const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const GenerateCardsModal = ({ isOpen, onClose, onGenerate, categories }) => {
+  const XIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
@@ -2626,7 +2587,7 @@ const GenerateCardsModal = ({ isOpen, onClose, onGenerate, categories }: Generat
   const [count, setCount] = useState(5);
   const [categoryId, setCategoryId] = useState(categories[0]?.id || '');
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
   
   useEffect(() => {
     if (isOpen) {
@@ -2642,7 +2603,7 @@ const GenerateCardsModal = ({ isOpen, onClose, onGenerate, categories }: Generat
     return null;
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!topic.trim() || count <= 0 || !categoryId) {
         setError("Por favor, preencha todos os campos.");
@@ -2749,30 +2710,23 @@ const GenerateCardsModal = ({ isOpen, onClose, onGenerate, categories }: Generat
 // --- END OF components/GenerateCardsModal.tsx ---
 
 // --- START OF components/HomeScreen.tsx ---
-interface HomeScreenProps {
-  categories: Category[];
-  onStartStudy: (categoryId: string, deckId: string, studyMode: 'flashcard' | 'exam') => void;
-  studiedCards: { [key: string]: boolean };
-  onOpenGenerateModal: () => void;
-}
-
-const HomeScreen = ({ categories, onStartStudy, studiedCards, onOpenGenerateModal }: HomeScreenProps) => {
-  const [selectedStudyMode, setSelectedStudyMode] = useState<'flashcard' | 'exam'>('exam');
+const HomeScreen = ({ categories, onStartStudy, studiedCards, onOpenGenerateModal }) => {
+  const [selectedStudyMode, setSelectedStudyMode] = useState('exam');
   
-  const BookOpenIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  const BookOpenIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
     </svg>
   );
   
-  const PlayCircleIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  const PlayCircleIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
        <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
     </svg>
   );
 
-  const SparklesIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  const SparklesIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM18 13.5l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 18l-1.035.259a3.375 3.375 0 00-2.456 2.456L18 21.75l-.259-1.035a3.375 3.375 0 00-2.456-2.456L14.25 18l1.035-.259a3.375 3.375 0 002.456-2.456L18 13.5z" />
     </svg>
@@ -2885,7 +2839,7 @@ const HomeScreen = ({ categories, onStartStudy, studiedCards, onOpenGenerateModa
 // --- END OF components/HomeScreen.tsx ---
 
 // --- START OF App.tsx ---
-const initialCategoriesWithIds: Category[] = CATEGORIES.map(category => ({
+const initialCategoriesWithIds = CATEGORIES.map(category => ({
   ...category,
   decks: category.decks.map(deck => ({
     ...deck,
@@ -2897,38 +2851,38 @@ const initialCategoriesWithIds: Category[] = CATEGORIES.map(category => ({
 }));
 
 const App = () => {
-    const HomeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    const HomeIcon = (props) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
       </svg>
     );
 
-    const GearIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    const GearIcon = (props) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.438.995s.145.755.438.995l1.003.827c.48.398.668 1.03.26 1.431l-1.296 2.247a1.125 1.125 0 01-1.37.49l-1.217-.456c-.355-.133-.75-.072-1.075.124a6.57 6.57 0 01-.22.127c-.332.183-.582.495-.645.87l-.213 1.281c-.09.543-.56.94-1.11.94h-2.593c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.063-.374-.313-.686-.645-.87a6.52 6.52 0 01-.22-.127c-.324-.196-.72-.257-1.075-.124l-1.217.456a1.125 1.125 0 01-1.37-.49l-1.296-2.247a1.125 1.125 0 01.26-1.431l1.003-.827c.293-.24.438-.613-.438.995s-.145-.755-.438-.995l-1.003-.827a1.125 1.125 0 01-.26-1.431l1.296-2.247a1.125 1.125 0 011.37.49l1.217.456c.355.133.75.072 1.075.124.073-.044.146-.087.22-.127.332-.183.582.495-.645-.87l.213-1.281z" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     );
 
-    const ArrowLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    const ArrowLeftIcon = (props) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
       </svg>
     );
 
-    const ArrowRightIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    const ArrowRightIcon = (props) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
       </svg>
     );
 
-    const CheckCircleIconForApp = (props: React.SVGProps<SVGSVGElement>) => (
+    const CheckCircleIconForApp = (props) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     );
     
-    const [categories, setCategories] = useState<Category[]>(initialCategoriesWithIds);
+    const [categories, setCategories] = useState(initialCategoriesWithIds);
     const [view, setView] = useState('home');
     const [selectedCategoryId, setSelectedCategoryId] = useState(CATEGORIES[1].id);
     const [selectedDeckId, setSelectedDeckId] = useState('novas-ineditas-fgv');
@@ -2937,7 +2891,7 @@ const App = () => {
     const [isCompleted, setIsCompleted] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [isGenerateModalOpen, setIsGenerateModalOpen] = useState(false);
-    const [studyMode, setStudyMode] = useState<'flashcard' | 'exam'>('exam');
+    const [studyMode, setStudyMode] = useState('exam');
     const [isAnswerVisible, setIsAnswerVisible] = useState(false);
     const [studiedCards, setStudiedCards] = useState(() => {
         try {
@@ -2966,7 +2920,7 @@ const App = () => {
       setIsAnswerVisible(false);
     };
 
-    const handleStartStudy = (catId: string, deckId: string, sMode: 'flashcard' | 'exam') => {
+    const handleStartStudy = (catId, deckId, sMode) => {
       setSelectedCategoryId(catId);
       setSelectedDeckId(deckId);
       setStudyMode(sMode);
@@ -2994,7 +2948,7 @@ const App = () => {
     const activeCards = useMemo(() => {
       if (!activeCategory) return [];
       
-      let allCards: Card[] = [];
+      let allCards = [];
       if (selectedDeckId === 'all') {
         allCards = activeCategory.decks.flatMap(deck => deck.cards);
       } else {
@@ -3017,7 +2971,7 @@ const App = () => {
         }
     }, [activeCards, currentCardIndex]);
 
-    const handleSettingsSave = (newCategoryId: string, newDeckId: string, newStudyMode: 'flashcard' | 'exam', newStudyUnstudiedOnly: boolean) => {
+    const handleSettingsSave = (newCategoryId, newDeckId, newStudyMode, newStudyUnstudiedOnly) => {
       if (selectedCategoryId !== newCategoryId || selectedDeckId !== newDeckId || studyUnstudiedOnly !== newStudyUnstudiedOnly) {
         setSelectedCategoryId(newCategoryId);
         setSelectedDeckId(newDeckId);
@@ -3032,10 +2986,10 @@ const App = () => {
       setIsSettingsOpen(false);
     };
 
-    const handleGenerateCards = async (topic: string, count: number, categoryId: string) => {
+    const handleGenerateCards = async (topic, count, categoryId) => {
       const newCardsData = await generateFlashcards(topic, count);
       
-      const newDeck: Deck = {
+      const newDeck = {
         id: `ai-${topic.replace(/\s+/g, '-').toLowerCase()}-${Date.now()}`,
         name: `${topic} (${count} questões IA)`,
         cards: newCardsData.map((card, index) => ({
@@ -3081,7 +3035,7 @@ const App = () => {
       resetStudyState();
     };
     
-    const toggleStudiedStatus = (cardId: string) => {
+    const toggleStudiedStatus = (cardId) => {
       setStudiedCards(prev => {
         const newStudied = {...prev};
         if (newStudied[cardId]) {
